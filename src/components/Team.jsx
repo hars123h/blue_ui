@@ -18,36 +18,20 @@ const Team = () => {
 
   const getUserDetails = async () => {
     const details = await axios.post(`${BASE_URL}/get_user`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data);
-    const details2 = await axios.post(`${BASE_URL}/team_sum`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data);
-    const lvl1 = await details.directMember.map(async(member_id)=> {
-      const mm_data = await axios.post(`${BASE_URL}/get_user`, { user_id: member_id }).then(({ data }) => data);
-      setLevel1([...level1, {
-        mobno:mm_data.mobno,
-        totalRecharge:mm_data.recharge_amount
-      }])
-    })
-
-    const lvl2 = await details.indirectMember.map(async(member_id)=> {
-      const mm_data = await axios.post(`${BASE_URL}/get_user`, { user_id: member_id }).then(({ data }) => data);
-      setLevel2([...level2, {
-        mobno:mm_data.mobno,
-        totalRecharge:mm_data.recharge_amount
-      }])
-    })
-
-    const lvl3 = await details.in_indirectMember.map(async(member_id)=> {
-      const mm_data = await axios.post(`${BASE_URL}/get_user`, { user_id: member_id }).then(({ data }) => data);
-      setLevel3([...level3, {
-        mobno:mm_data.mobno,
-        totalRecharge:mm_data.recharge_amount
-      }])
-    })
+    const arr1 = await axios.post(`${BASE_URL}/lvl1`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data.level1);
+    const arr2 = await axios.post(`${BASE_URL}/lvl2`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data.level2);
+    const arr3 = await axios.post(`${BASE_URL}/lvl3`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data.level3);
+    
     setUserDetails(details);
-    setTeamDetails(details2);
+    setLevel1(arr1);
+    setLevel2(arr2);
+    setLevel3(arr3);
   }
 
   useLayoutEffect(() => {
-    getUserDetails().then(()=>setLoading(false));
+    getUserDetails().then(()=>{
+      setLoading(false);
+    })
   }, []);
 
   if (loading || userDetails === null) {
@@ -90,9 +74,7 @@ const Team = () => {
               <div>Level 1 Earning: &#8377;{userDetails.directRecharge}</div>
             </div>
 
-            {teamDetails!==null && userDetails.directMember.map(async(element, index) => {
-              const tempData = await axios.post(`${BASE_URL}/get_user`, { user_id: element }).then(({ data }) => data);
-              
+            {level1.map((element, index) => {
               return (
                 <div key={index} className='flex flex-row text-[#16a4ba] font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -101,8 +83,8 @@ const Team = () => {
                     </svg>
 
                   </div>
-                  <div>+91 {tempData.mobno}</div>
-                  <div>&#8377; {tempData.recharge_amount}</div>
+                  <div>+91 {element.mobno}</div>
+                  <div>&#8377; {element.recharge_amount}</div>
                 </div>
               )
             })}
@@ -116,7 +98,7 @@ const Team = () => {
               <div>Level 2 Earning: &#8377;{userDetails.indirectRecharge}</div>
             </div>
 
-            {teamDetails!==null && level2.map((element, index) => {
+            { level2.map((element, index) => {
               return (
                 <div key={index} className='flex flex-row text-[#16a4ba] font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -126,7 +108,7 @@ const Team = () => {
 
                   </div>
                   <div>+91 {element.mobno}</div>
-                  <div>&#8377; {element.totalRecharge}</div>
+                  <div>&#8377; {element.recharge_amount}</div>
                 </div>
               )
             })}
@@ -140,7 +122,7 @@ const Team = () => {
               <div>Level 3 Earning: &#8377;{userDetails.in_indirectRecharge}</div>
             </div>
 
-            {teamDetails!==null && level3.map((element, index) => {
+            { level3.map((element, index) => {
               return (
                 <div key={index} className='flex flex-row text-[#16a4ba] font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -150,7 +132,7 @@ const Team = () => {
 
                   </div>
                   <div>+91 {element.mobno}</div>
-                  <div>&#8377; {element.totalRecharge}</div>
+                  <div>&#8377; {element.recharge_amount}</div>
                 </div>
               )
             })}
