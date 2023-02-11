@@ -217,7 +217,7 @@ const Home = () => {
             {/* <Slider /> */}
             <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5 border border-gray-300">
                 <img src={new_invite_image} alt="invite_image" className='rounded-xl'/>
-                <div className='flex flex-col  absolute top-5 left-5'>
+                <div className='flex flex-col  absolute top-1 left-2 m-1'>
                     <div className='text-2xl font-extrabold text-white'>Invite friends to</div>
                     <div className='text-2xl font-extrabold text-white'>make money together</div>
                     <div className='shadow-xl px-4 py-1 rounded-full text-white text-xl font-extrabold button_bg'>Implement friends right away</div>

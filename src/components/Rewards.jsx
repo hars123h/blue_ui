@@ -91,7 +91,7 @@ const Rewards = () => {
                     </div>
 
                     <div className="flex flex-col items-center translate-y-5  bg-[#ff8603] p-3 w-[85%] mx-auto text-white text-md font-bold rounded-lg shadow-orange-500 shadow-md">
-                        <div>Invite friends to invest in &#8377; 500</div>
+                        <div>Invite friends to invest in 500</div>
                         <div>and immediately light up the level icon!</div>
                     </div>
 
@@ -105,14 +105,14 @@ const Rewards = () => {
                                 <img src={reward1} alt="reward" className='w-8 h-8' />
                             </div>
                             <div className="w-8/12 flex flex-col text-sm">
-                                <div className='font-semibold text-xs'>Invitation 3 Friends spend &#8377; 500</div>
+                                <div className='font-semibold text-xs'>Invitation 3 Friends spend   500</div>
                                 <div className='flex gap-1 items-center'>
                                     <progress value={Math.min(reward1_details?.friend_length, 3)} max={3}>  </progress>
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 3)}/3</div>
                                 </div>
                             </div>
                             <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
-                                +&#8377;300
+                                + 300
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
                                 <div className="w-1/6 text-center border-2 text-orange-400 border-orange-400 rounded-full p-1 font-extrabold hover:cursor-pointer">
@@ -127,14 +127,14 @@ const Rewards = () => {
                                 <img src={reward1} alt="reward" className='w-8 h-8' />
                             </div>
                             <div className="w-8/12 flex flex-col text-sm">
-                                <div className='font-semibold text-xs'>Invitation 5 Friends spend &#8377; 500</div>
+                                <div className='font-semibold text-xs'>Invitation 5 Friends spend   500</div>
                                 <div className='flex gap-1 items-center'>
                                     <progress value={Math.min(reward1_details?.friend_length, 5)} max={5}>  </progress>
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 5)}/5</div>
                                 </div>
                             </div>
                             <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
-                                +&#8377;500
+                                + 500
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
                                 <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
@@ -148,14 +148,14 @@ const Rewards = () => {
                                 <img src={reward1} alt="reward" className='w-8 h-8' />
                             </div>
                             <div className="w-8/12 flex flex-col text-sm">
-                                <div className='font-semibold text-xs'>Invitation 10 Friends spend &#8377; 500</div>
+                                <div className='font-semibold text-xs'>Invitation 10 Friends spend   500</div>
                                 <div className='flex gap-1 items-center'>
                                     <progress value={Math.min(reward1_details?.friend_length, 10)} max={10}>  </progress>
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 10)}/10</div>
                                 </div>
                             </div>
                             <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
-                                +&#8377;1,200
+                                + 1,200
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
                                 <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
@@ -169,14 +169,14 @@ const Rewards = () => {
                                 <img src={reward1} alt="reward" className='w-8 h-8' />
                             </div>
                             <div className="w-8/12 flex flex-col text-sm">
-                                <div className='font-semibold text-xs'>Invitation 30 Friends spend &#8377; 500</div>
+                                <div className='font-semibold text-xs'>Invitation 30 Friends spend   500</div>
                                 <div className='flex gap-1 items-center'>
                                     <progress value={Math.min(reward1_details?.friend_length, 30)} max={30}>  </progress>
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 30)}/30</div>
                                 </div>
                             </div>
                             <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
-                                +&#8377;3,500
+                                + 3,500
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
                                 <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
@@ -190,14 +190,14 @@ const Rewards = () => {
                                 <img src={reward1} alt="reward" className='w-8 h-8' />
                             </div>
                             <div className="w-8/12 flex flex-col text-sm">
-                                <div className='font-semibold text-xs'>Invitation 60 Friends spend &#8377; 500</div>
+                                <div className='font-semibold text-xs'>Invitation 60 Friends spend   500</div>
                                 <div className='flex gap-1 items-center'>
                                     <progress value={Math.min(reward1_details?.friend_length, 60)} max={60}>  </progress>
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 60)}/60</div>
                                 </div>
                             </div>
                             <div className="w-1/6 text-right text-[0.7rem] text-[#16a4ba] font-semibold mr-1">
-                                +&#8377;10,000
+                                + 10,000
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
                                 <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">

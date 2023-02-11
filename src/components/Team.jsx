@@ -90,8 +90,9 @@ const Team = () => {
               <div>Level 1 Earning: &#8377;{userDetails.directRecharge}</div>
             </div>
 
-            {teamDetails!==null && level1.map((element, index) => {
-              console.log(element);
+            {teamDetails!==null && userDetails.directMember.map(async(element, index) => {
+              const tempData = await axios.post(`${BASE_URL}/get_user`, { user_id: element }).then(({ data }) => data);
+              
               return (
                 <div key={index} className='flex flex-row text-[#16a4ba] font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -100,8 +101,8 @@ const Team = () => {
                     </svg>
 
                   </div>
-                  <div>+91 {element.mobno}</div>
-                  <div>&#8377; {element.totalRecharge}</div>
+                  <div>+91 {tempData.mobno}</div>
+                  <div>&#8377; {tempData.recharge_amount}</div>
                 </div>
               )
             })}
