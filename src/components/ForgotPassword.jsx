@@ -54,7 +54,7 @@ const ForgotPassword = () => {
                     <div>{toasterText}</div>
                 </div>
             </div>:null}
-            <div className='text-center bg-[#12a6b4] font-sans text-white pt-2 text-lg mb-10
+            <div className='text-center bg-blue-600 font-sans text-white pt-2 text-lg mb-10
         pb-2'> <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate('/login')} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute left-2 cursor-pointer hover:bg-white hover:stroke-black hover:rounded-full transition rounded-full ease-in-out delay-150 duration-200">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -64,13 +64,13 @@ const ForgotPassword = () => {
                 <div className="no_phone mb-3 flex items-center ">
                     <input onChange={(e) => { setMobno(e.target.value); setOTPfield(String(Math.floor(100000 + Math.random() * 900000))) }} type="number" 
                     className='p-2 w-full outline-none rounded-xl border flex-grow border-gray-300 mr-1' placeholder='Phone number' name="phoneno" id="phoneno" />
-                    <div onClick={handleMessage} className='opt w-[20%] bg-[#12a6b4] text-xs cursor-pointer p-2 shadow-md rounded-lg text-white text-center'>OTP</div>
+                    <div onClick={handleMessage} className='opt w-[20%] bg-blue-600 text-xs cursor-pointer p-2 shadow-md rounded-lg text-white text-center'>OTP</div>
                 </div>
 
 
                 <input type="password" className='p-2 w-full outline-none rounded-xl border flex-grow border-gray-300' onChange={(e) => setOtp(e.target.value)} placeholder='Please enter the OTP' name="passowrd" id="pass" />
-                <button onClick={handleReset} disabled={!(otpfield == otp && otp.length > 0 && otpfield.length > 0)} className={`${(otpfield == otp && otp.length > 0 && otpfield.length > 0) ? 'bg-[#12a6b4]' : 'bg-gray-500 cursor-not-allowed'} text-white pt-1 pb-1 rounded-lg text-lg`}>Confirm</button>
-                <div onClick={() => { navigate('/login') }} className='cursor-pointer text-center text-sm underline bg-white text-[#12a6b4] mt-2 p-2'>
+                <button onClick={handleReset} disabled={!(otpfield == otp && otp.length > 0 && otpfield.length > 0)} className={`${(otpfield == otp && otp.length > 0 && otpfield.length > 0) ? 'bg-blue-600' : 'bg-gray-500 cursor-not-allowed'} text-white pt-1 pb-1 rounded-lg text-lg`}>Confirm</button>
+                <div onClick={() => { navigate('/login') }} className='cursor-pointer text-center text-sm underline bg-white text-blue-600 mt-2 p-2'>
                     Already have an account, log in
                 </div>
             </div>

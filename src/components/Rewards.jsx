@@ -71,9 +71,9 @@ const Rewards = () => {
 
             {isloading ? <div className='flex flex-col justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <RotatingLines strokeColor='gray' width='30' />
-                <div className='text-sm text-[#16a4ba]'>Loading...</div>
+                <div className='text-sm text-blue-600'>Loading...</div>
             </div> : <>
-                <div className="options text-center text-white flex gap-2 items-center p-2  bg-[#10a6b7] text-lg pt-2 font-medium">
+                <div className="options text-center text-white flex gap-2 items-center p-2  bg-blue-600 text-lg pt-2 font-medium">
                     <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                     </svg>
@@ -111,7 +111,7 @@ const Rewards = () => {
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 3)}/3</div>
                                 </div>
                             </div>
-                            <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
+                            <div className="w-1/6 text-right text-xs text-blue-600 font-semibold mr-1">
                                 + 300
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
@@ -133,7 +133,7 @@ const Rewards = () => {
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 5)}/5</div>
                                 </div>
                             </div>
-                            <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
+                            <div className="w-1/6 text-right text-xs text-blue-600 font-semibold mr-1">
                                 + 500
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
@@ -154,7 +154,7 @@ const Rewards = () => {
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 10)}/10</div>
                                 </div>
                             </div>
-                            <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
+                            <div className="w-1/6 text-right text-xs text-blue-600 font-semibold mr-1">
                                 + 1,200
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
@@ -175,7 +175,7 @@ const Rewards = () => {
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 30)}/30</div>
                                 </div>
                             </div>
-                            <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
+                            <div className="w-1/6 text-right text-xs text-blue-600 font-semibold mr-1">
                                 + 3,500
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
@@ -196,7 +196,7 @@ const Rewards = () => {
                                     <div className='ml-1'>{Math.min(reward1_details?.friend_length, 60)}/60</div>
                                 </div>
                             </div>
-                            <div className="w-1/6 text-right text-[0.7rem] text-[#16a4ba] font-semibold mr-1">
+                            <div className="w-1/6 text-right text-[0.7rem] text-blue-600 font-semibold mr-1">
                                 + 10,000
                             </div>
                             <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
@@ -208,9 +208,9 @@ const Rewards = () => {
                     </div>
 
                     <div className="flex w-[98%] flex-col font-bold border bg-white border-gray-300 shadow-lg mt-2 rounded-lg mx-auto p-3 gap-2">
-                        <div className='text-lg text-[#16a4ba]'>*Enter the Lifafa code to get today's rewards</div>
+                        <div className='text-lg text-blue-600'>*Enter the Lifafa code to get today's rewards</div>
                         <input onChange={(e) => setInput_promo(e.target.value)} type="text" className='flex-grow bg-gray-300 placeholder:text-gray-500 p-3 rounded-lg shadow-md' placeholder='enter the code' />
-                        <button onClick={getReward2} className='bg-[#16a4ba] p-3 text-white shadow-md rounded-md '>Redeem Code</button>
+                        <button onClick={getReward2} className='bg-blue-600 p-3 text-white shadow-md rounded-md '>Redeem Code</button>
                     </div>
                 </div>
             </>}

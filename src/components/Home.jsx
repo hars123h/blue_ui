@@ -175,7 +175,7 @@ const Home = () => {
             </div> : null}
 
             {planPurchaseShow ? <div className='absolute w-[65%]  top-[450px] rounded-lg shadow-xl  z-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex flex-col justify-center gap-3 h-[180px] shadow-2xl border border-gray-300 items-center bg-white w-full text-blue-500 rounded-xl'>
+                <div className='flex flex-col justify-center gap-3 h-[180px] shadow-2xl border border-gray-300 items-center bg-white w-full text-blue-600 rounded-xl'>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16">
                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
@@ -187,7 +187,7 @@ const Home = () => {
 
             {welcomeShow ? <div className='absolute w-[90%] top-[350px] rounded-lg shadow-xl  z-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 flex-col bg-white w-full text-blue-500 rounded-md'>
-                    <div className='bg-[#16a4ba] text-center p-1 text-lg shadow-md text-white'>Notice</div>
+                    <div className='bg-blue-600 text-center p-1 text-lg shadow-md text-white'>Notice</div>
                     <div className='flex flex-col p-2 text-gay-600 gap-2 font-bold'>
                         <div>Welcome to Wind Harvester investment Platform</div>
                         <div>Let Wind Harvester create unlimited wealth with you.</div>
@@ -240,7 +240,7 @@ const Home = () => {
             </div>
 
             {/*Marquee Implementation*/}
-            <div className="bg-[#1cb5b2] rounded-full items-center px-2 text-white relative flex overflow-x-hidden h-10 mx-auto mt-2 border-2 border-gray-100 sm:w-3/5 lg:w-3/5 overflow-y-hidden">
+            <div className="bg-blue-600 rounded-full items-center px-2 text-white relative flex overflow-x-hidden h-10 mx-auto mt-2 border-2 border-gray-100 sm:w-3/5 lg:w-3/5 overflow-y-hidden">
                 <div>
                     <VolumeUpOutlined />
                 </div>

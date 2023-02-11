@@ -106,7 +106,7 @@ function App() {
           <Route path="/admin/user_details" element={<UserDetails />} />
           <Route path="/rewards" element={<Rewards />} />
         </Routes>
-        <div className='fixed top-[400px] right-0 p-2 bg-[#16a4ba] rounded-l-full transform  -translate-y-1/2 flex items-center justify-center'>
+        <div className='fixed top-[400px] right-0 p-2 bg-blue-600 rounded-l-full transform  -translate-y-1/2 flex items-center justify-center'>
           <a href="https://telegram.me/amazfit_official" className='no-underline text-white cursor-pointer'>
             <img src={telephone} alt="telephone_icon" className='w-5 h-5 p-1 bg-white rounded-full shadow-2xl' />
           </a>
