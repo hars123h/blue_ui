@@ -28,6 +28,11 @@ import amaz_short2 from '../images/amaz_short2.jpg';
 import amaz_short3 from '../images/amaz_short3.jpg';
 import amaz_short4 from '../images/amaz_short4.jpg';
 import { VolumeUpOutlined } from '@material-ui/icons';
+import rent from '../images/rent.png';
+import financial from '../images/financial.png';
+import user from '../images/user.png';
+import make_money from '../images/make_money.png';
+import dividend from '../images/dividend.png';
 
 
 const customStyles = {
@@ -271,31 +276,31 @@ const ShortPlans = () => {
 
 
             {/*Navigation Bar 2*/}
-            <div className="fixed bottom-0 z-10 bg-[#1cb5b2] rounded-none text-white flex overflow-x-hidden  mx-auto mt-2 border-2 border-gray-100 w-full overflow-y-hidden">
+            <div className="fixed bottom-0 z-10 bg-white  rounded-none text-gray-800 flex overflow-x-hidden  mx-auto mt-2 border-2 border-gray-200 shadow-xl w-full overflow-y-hidden">
                 <div className="flex flex-row justify-around items-center w-full py-2">
                     <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/home')}>
-                        <img src={ubon_home} alt="online" className='w-4' />
-                        <div>Home</div>
+                        <img src={make_money} alt="online" className='w-4' />
+                        <div className='text-xs pt-1'>make money</div>
                     </div>
 
-                    <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' >
-                        <img src={ubon_home} alt="online" className='w-4' />
-                        <div>Financial</div>
+                    <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/financial')} >
+                        <img src={financial} alt="online" className='w-4' />
+                        <div className='text-xs pt-1'>financial</div>
                     </div>
 
-                    <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/team')}>
-                        <img src={ubon_group} alt="recharge" className='w-4' />
-                        <div>Team</div>
+                    <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/record')}>
+                        <img src={rent} alt="recharge" className='w-4' />
+                        <div className='text-xs pt-1'>rent</div>
                     </div>
                     <div className='cursor-pointer mx-2 flex flex-col justify-center items-center ' onClick={() => navigate('/project')}>
-                        <img src={book_image} alt="app_dwd" className='w-4' />
-                        <div>Project</div>
+                        <img src={dividend} alt="app_dwd" className='w-4' />
+                        <div className='text-xs pt-1'>dividend</div>
                     </div>
 
 
                     <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/mine')}>
-                        <img src={ubon_user} alt="invite" className='w-4' />
-                        <div>My</div>
+                        <img src={user} alt="invite" className='w-4' />
+                        <div className='text-xs pt-1'>user</div>
                     </div>
                 </div>
             </div>
