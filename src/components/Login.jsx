@@ -12,6 +12,7 @@ import apache_logo from '../images/apache_logo.png';
 import axios from 'axios';
 import BASE_URL from '../api_url';
 import amaz_logi from '../images/amaz_logi.png';
+import windharvester_logo from '../images/windharvester_logo.png';
 
 
 const Login = () => {
@@ -80,7 +81,7 @@ const Login = () => {
     }
 
     return (
-        <div className='relative h-screen bg-[#33bab6]'>
+        <div className='relative h-screen bg-white'>
             {toasterShow?<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
@@ -93,7 +94,7 @@ const Login = () => {
                 <div className='text-sm'>{text}</div>
             </div> : null}
             <div className='text-center'>
-                <img src={amaz_logi} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 pt-4 mb-8' width={240} />
+                <img src={windharvester_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 pt-4 mb-8' width={240} />
             </div>
             <div className='flex flex-col m-auto w-5/6 mt-2'>
                 <div className=" items-center justify-center mb-3 p-2 phoneno flex  bg-[#f1f1f1] rounded-full">
@@ -114,8 +115,8 @@ const Login = () => {
                 </div>
                 {/*[#379EFE] */}
                 <div className="options flex flex-col justify-between items-center gap-10 mt-8 text-sm">
-                    <div className='cursor-pointer text-white ' onClick={() => navigate('/forgot')}>Forget password?</div>
-                    <div className='text-white cursor-pointer' onClick={() => navigate('/register')}>No account, go register {">"}</div>
+                    <div className='cursor-pointer text-blue-700 font-bold ' onClick={() => navigate('/forgot')}>Forget password?</div>
+                    <div className='text-blue-700 font-bold cursor-pointer' onClick={() => navigate('/register')}>No account, go register {">"}</div>
                 </div>
 
             </div>

@@ -20,6 +20,7 @@ import BASE_URL from '../api_url';
 import amaz_logi from '../images/amaz_logi.png';
 import bg_blue2 from '../images/bg_blue2.png';
 import cartoon_user from '../images/cartoon_user.png';
+import new_invite_image from '../images/new_invite_image.png';
 
 
 
@@ -124,9 +125,9 @@ const Mine = () => {
       
       <div className='flex flex-col mine_image'>
         {/* [#2e9afe] */}
-        <div className="top h-56">
+        <div className="top h-40">
         
-          <div className="info pt-10 pl-10 flex items-center justify-start">
+          <div className="info pt-6 pl-10 flex items-center justify-start">
             <div className='flex justify-center items-center bg-white rounded-full'>
               <img src={cartoon_user} alt="logo" className='w-20 rounded' />
             </div>
@@ -137,27 +138,12 @@ const Mine = () => {
           </div>
 
           {/* [#2b85d9] */}
-          <div className="h-36 overflow-y-visible rounded-xl  info_box bg-[#ffffff] text-gray-500 flex flex-col shadow-lg shadow-gray-400  items-center justify-between w-[90%] mx-auto mt-2 px-4 py-4">
+          <div className="h-26 overflow-y-visible rounded-xl  info_box bg-[#ffffff] text-gray-500 flex flex-col shadow-lg shadow-gray-400  items-center justify-between w-[90%] mx-auto mt-2 px-4 py-2">
             
             <div className='flex justify-center flex-col items-center font-semibold'>
               <div className='text-[#12a6b4]'>Account Balance</div>
               <div className='text-xl font-bold text-black'><span className='text-[#12a6b4] mr-2 '>&#8377;</span>{new Intl.NumberFormat().format(balance)}</div>
             </div>
-
-            {/* <div className='flex flex-col items-center'>
-              <div className='text-xs mb-2'>&#8377; {new Intl.NumberFormat().format(balance)}</div>
-              <div>Balance</div>
-            </div>
-
-            <div className='flex flex-col items-center'>
-              <div className='text-xs mb-2'>&#8377;{new Intl.NumberFormat().format(recharge_amount)}</div>
-              <div>Recharge</div>
-            </div>
-
-            <div className='flex flex-col items-center'>
-              <div className='text-xs mb-2'>&#8377; {new Intl.NumberFormat().format(earning)}</div>
-              <div>Earning</div>
-            </div> */}
 
             <div className='flex gap-4 text-white'>
               <div className='rounded-full text-center px-4 py-1 bg-[#12a6b4] w-32 shadow-lg' onClick={() => navigate('/recharge')}>Recharge</div>
@@ -170,20 +156,21 @@ const Mine = () => {
           </div>
         </div>
 
-        <div className="box h-36 bg-[#fafff9] rounded-xl shadow-xl mx-4 mt-16 border border-gray-300">
-
+        <div className="box  bg-[#fafff9] relative  shadow-xl mx-4 mt-16 border border-gray-300">
+                <img src={new_invite_image} alt="invite_image" className='rounded-xl h-16 w-full'/>
+                <div className='rounded-full shadow-xl font-bold w-[85%] text-center absolute top-3 left-6 z-10 bg-orange-600 text-white py-2 px-4 '>Invite Friends right away!</div>
         </div>
 
-        <div className="box mb-20 gap-2 flex flex-col text-gray-500 font-semibold bg-[#fafff9] rounded-xl  shadow-xl m-4 border border-gray-300">
-            <div className='cursor-pointer flex justify-between p-2 items-center'>
-              <div className='flex gap-2 items-center px-1' onClick={() => navigate('/bank', {state:{withdrawalPassword:originalwpwd, loginPassword:originalpwd}})}>
+        <div className="box mb-20 gap-1 flex flex-col text-gray-500 font-semibold bg-[#fafff9] rounded-xl  shadow-xl m-3 border border-gray-300">
+            
+            <div className=' cursor-pointer flex justify-between p-2 items-center' onClick={()=>navigate('/rewards')}>
+              <div className='flex gap-2 items-center px-1'>
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 fill-[#12a6b4]">
-                    <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
-                  </svg>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />                  </svg>
                 </div>
                 <div>
-                  My Financial Management
+                  Rewards
                 </div>
               </div>
               <div>
@@ -278,22 +265,6 @@ const Mine = () => {
               </div>
             </div>
 
-            <div className=' cursor-pointer flex justify-between p-2 items-center' onClick={()=>navigate('/rewards')}>
-              <div className='flex gap-2 items-center px-1'>
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 fill-[#12a6b4]">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />                  </svg>
-                </div>
-                <div>
-                  Rewards
-                </div>
-              </div>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                  <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clipRule="evenodd" />
-                </svg>
-              </div>
-            </div>
 
             <div className=' cursor-pointer flex justify-between p-2 items-center' onClick={handleSignOut}>
               <div className='flex gap-2 items-center px-1'>

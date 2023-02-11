@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useLayoutEffect } from 'react'
 import { useState } from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import { RotatingLines } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import BASE_URL from '../api_url';
 import reward1 from '../images/reward1.svg';
-
 
 const Rewards = () => {
 
@@ -16,6 +16,8 @@ const Rewards = () => {
     const [input_promo, setInput_promo] = useState('');
     const [isloading, setIsloading] = useState(true);
     const navigate = useNavigate();
+
+    const site_url = 'https://www.amazfit44.tech/register/invite_code/'+localStorage.getItem('user_invite');
 
     const toaster = (text) => {
         setToasterText(text);
@@ -112,9 +114,12 @@ const Rewards = () => {
                             <div className="w-1/6 text-right text-sm text-[#16a4ba] font-semibold mr-1">
                                 +&#8377;300
                             </div>
-                            <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
-                                invite
-                            </div>
+                            <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
+                                <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
+                                    invite
+                                </div>
+                            </CopyToClipboard>
+
                         </div>
 
                         <div className="flex items-center gap-1 border-b border-gray-300 py-2">
@@ -131,9 +136,11 @@ const Rewards = () => {
                             <div className="w-1/6 text-right text-sm text-[#16a4ba] font-semibold mr-1">
                                 +&#8377;500
                             </div>
-                            <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
-                                invite
-                            </div>
+                            <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
+                                <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
+                                    invite
+                                </div>
+                            </CopyToClipboard>
                         </div>
 
                         <div className="flex items-center gap-1 border-b border-gray-300 py-2">
@@ -150,9 +157,11 @@ const Rewards = () => {
                             <div className="w-1/6 text-right text-sm text-[#16a4ba] font-semibold mr-1">
                                 +&#8377;1,200
                             </div>
-                            <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
-                                invite
-                            </div>
+                            <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
+                                <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
+                                    invite
+                                </div>
+                            </CopyToClipboard>
                         </div>
 
                         <div className="flex items-center gap-1 border-b border-gray-300 py-2">
@@ -169,9 +178,11 @@ const Rewards = () => {
                             <div className="w-1/6 text-right text-sm text-[#16a4ba] font-semibold mr-1">
                                 +&#8377;3,500
                             </div>
-                            <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
-                                invite
-                            </div>
+                            <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
+                                <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
+                                    invite
+                                </div>
+                            </CopyToClipboard>
                         </div>
 
                         <div className="flex items-center gap-1 border-b border-gray-300 py-2">
@@ -188,9 +199,11 @@ const Rewards = () => {
                             <div className="w-1/6 text-right text-xs text-[#16a4ba] font-semibold mr-1">
                                 +&#8377;10,000
                             </div>
-                            <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
-                                invite
-                            </div>
+                            <CopyToClipboard text={site_url} onCopy={() => alert('Copied to clipboard')}>
+                                <div className="w-1/6 text-center border text-orange-400 border-orange-400 rounded-full p-1 font-semibold hover:cursor-pointer">
+                                    invite
+                                </div>
+                            </CopyToClipboard>
                         </div>
                     </div>
 

@@ -28,6 +28,9 @@ import amaz_short2 from '../images/amaz_short2.jpg';
 import amaz_short3 from '../images/amaz_short3.jpg';
 import amaz_short4 from '../images/amaz_short4.jpg';
 import { VolumeUpOutlined } from '@material-ui/icons';
+import new_invite_image from '../images/new_invite_image.png';
+import windharvester_logo from '../images/windharvester_logo.png';
+
 
 
 const customStyles = {
@@ -79,6 +82,7 @@ const Home = () => {
                 setUserDetails(data);
                 setOriginalwpwd(data.wpwd);
                 setOriginalpwd(data.pwd);
+                localStorage.setItem('user_invite', data.user_invite);
             } else {
                 //console.log('Data not found');
             }
@@ -176,18 +180,18 @@ const Home = () => {
                 </div>
             </div> : null}
 
-            {welcomeShow ? <div className='absolute w-[90%] top-[450px] rounded-lg shadow-xl  z-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+            {welcomeShow ? <div className='absolute w-[90%] top-[350px] rounded-lg shadow-xl  z-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 flex-col bg-white w-full text-blue-500 rounded-md'>
                     <div className='bg-[#16a4ba] text-center p-1 text-lg shadow-md text-white'>Notice</div>
                     <div className='flex flex-col p-2 text-gay-600 gap-2 font-bold'>
-                        <div>Welcome to Hollywood Film investment Platform</div>
-                        <div>Let Hollywood create unlimited wealth with you.</div>
-                        <div>The Hollywood Movie APP is officialy launched, let us walk together on the road to wealth.</div>
-                        <div>Invest 300 &#8377; Earn 150 &#8377; Daily</div>
-                        <div>Invest 300 &#8377; Earn 150 &#8377; Daily</div>
-                        <div>Invest 300 &#8377; Earn 150 &#8377; Daily</div>
-                        <div>Invest 300 &#8377; Earn 150 &#8377; Daily</div>
-                        <div>Invest 300 &#8377; Earn 150 &#8377; Daily</div>
+                        <div>Welcome to Wind Harvester investment Platform</div>
+                        <div>Let Wind Harvester create unlimited wealth with you.</div>
+                        <div>The Windharvester 44 APP is officialy launched, let us walk together on the road to wealth.</div>
+                        <div>Invest 300 &#8377; Earn 20 &#8377; Daily</div>
+                        <div>Invest 600 &#8377; Earn 50 &#8377; Daily</div>
+                        <div>Invest 1500 &#8377; Earn 100 &#8377; Daily</div>
+                        <div>Invest 3000 &#8377; Earn 170 &#8377; Daily</div>
+                        <div>Invest 5000 &#8377; Earn 300 &#8377; Daily</div>
                     </div>
                     <div className='text-center text-gray-600 font-semibold p-2 border-t border-gray-600'
                         onClick={(e) => {
@@ -201,14 +205,14 @@ const Home = () => {
 
             <div className='bg-[#fafff9] py-3 shadow-lg px-3 flex justify-between items-center'>
                 <div>
-                    <img src={amaz_logi} className="w-20 h-6" alt="logo" />
+                    <img src={windharvester_logo} className="w-24 h-6" alt="logo" />
                 </div>
                 <div className='text-gray-500 text-sm'>Switch Language{">"}</div>
             </div>
             {/* <Slider /> */}
-            <div className="box  h-36 bg-[#fafff9] rounded-xl shadow-xl m-2 border border-gray-300">
-
-            </div>
+            <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5 border border-gray-300">
+                <img src={new_invite_image} alt="invite_image" className='rounded-xl'/>
+        </div>
             <div>
                 <ReactModal
                     isOpen={modalIsOpen}
@@ -231,11 +235,11 @@ const Home = () => {
                     <VolumeUpOutlined />
                 </div>
                 <div className="py-12 animate-marquee flex flex-col whitespace-nowrap">
-                    <span className="mx-4 text-sm">91915*****05 Member withdrawl 100000 Rs</span>
-                    <span className="mx-4 text-sm">91702*****84 Member withdrawl 30000 Rs</span>
-                    <span className="mx-4 text sm">91827*****42 Member withdrawl 2000 Rs</span>
-                    <span className="mx-4 text sm">91770*****28 Member withdrawl 500 Rs</span>
-                    <span className="mx-4 text sm">91983*****17 Member withdrawl 100000 Rs</span>
+                    <span className="mx-4 text-sm">91915***05 Member withdrawl 100000 Rs</span>
+                    <span className="mx-4 text-sm">91702***84 Member withdrawl 30000 Rs</span>
+                    <span className="mx-4 text sm">91827***42 Member withdrawl 2000 Rs</span>
+                    <span className="mx-4 text sm">91770***28 Member withdrawl 500 Rs</span>
+                    <span className="mx-4 text sm">91983***17 Member withdrawl 100000 Rs</span>
                 </div>
             </div>
 
@@ -246,91 +250,91 @@ const Home = () => {
                     <div className='grid grid-cols-1 gap-1'>
                         {userDetails && (amountDetails.plan_state[0] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 1"} plan_cycle={365} plan_daily_earning={20} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={20} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 1"} plan_cycle={365} plan_daily_earning={20} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={20} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[1] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big2} handleClick={handleClick} plan_name={"amazfit 2"} plan_cycle={365} plan_daily_earning={50} plan_amount={600} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={50} plan_amount={600} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big2} handleClick={handleClick} plan_name={"amazfit 2"} plan_cycle={365} plan_daily_earning={50} plan_amount={600} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={50} plan_amount={600} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[2] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big3} handleClick={handleClick} plan_name={"amazfit 3"} plan_cycle={365} plan_daily_earning={100} plan_amount={1500} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={100} plan_amount={1500} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big3} handleClick={handleClick} plan_name={"amazfit 3"} plan_cycle={365} plan_daily_earning={100} plan_amount={1500} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={100} plan_amount={1500} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[3] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big4} handleClick={handleClick} plan_name={"amazfit 4"} plan_cycle={365} plan_daily_earning={170} plan_amount={3000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={170} plan_amount={3000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big4} handleClick={handleClick} plan_name={"amazfit 4"} plan_cycle={365} plan_daily_earning={170} plan_amount={3000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={170} plan_amount={3000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[4] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big5} handleClick={handleClick} plan_name={"amazfit 5"} plan_cycle={365} plan_daily_earning={300} plan_amount={5000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big5} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={300} plan_amount={5000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big5} handleClick={handleClick} plan_name={"amazfit 5"} plan_cycle={365} plan_daily_earning={300} plan_amount={5000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big5} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={300} plan_amount={5000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[5] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 6"} plan_cycle={365} plan_daily_earning={410} plan_amount={9000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={410} plan_amount={9000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 6"} plan_cycle={365} plan_daily_earning={410} plan_amount={9000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={410} plan_amount={9000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                          {userDetails && (amountDetails.plan_state[6] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 7"} plan_cycle={365} plan_daily_earning={750} plan_amount={20000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={750} plan_amount={20000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 7"} plan_cycle={365} plan_daily_earning={750} plan_amount={20000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={750} plan_amount={20000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                          {userDetails && (amountDetails.plan_state[7] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 8"} plan_cycle={365} plan_daily_earning={2500} plan_amount={35000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 8"} plan_cycle={365} plan_daily_earning={2500} plan_amount={35000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 8"} plan_cycle={365} plan_daily_earning={2500} plan_amount={35000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 8"} plan_cycle={365} plan_daily_earning={2500} plan_amount={35000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                          {userDetails && (amountDetails.plan_state[8] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 9"} plan_cycle={365} plan_daily_earning={4000} plan_amount={60000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 9"} plan_cycle={365} plan_daily_earning={4000} plan_amount={60000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"amazfit 9"} plan_cycle={365} plan_daily_earning={4000} plan_amount={60000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={amaz_big1} handleClick={handleClick} plan_name={"Windharvester 9"} plan_cycle={365} plan_daily_earning={4000} plan_amount={60000} plan_type={'Big Plan'} />
                             </span>
                         )}
                     </div>)}

@@ -143,9 +143,9 @@ const Project = () => {
             </div> : null}
 
             <div className="options text-center text-white flex gap-2 items-center p-2  bg-[#10a6b7] text-lg pt-2 font-medium">
-                <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
+                {/* <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
-                </svg>
+                </svg> */}
                 <div className='flex-grow text-center text-sm'>Project Record</div>
             </div>
 

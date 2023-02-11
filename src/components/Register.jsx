@@ -49,10 +49,10 @@ const Register = () => {
             return;
         }
 
-        if (pwd !== cpwd) {
-            toaster('Passwords do not match!');
-            return;
-        }
+        // if (pwd !== cpwd) {
+        //     toaster('Passwords do not match!');
+        //     return;
+        // }
 
         if (pwd.length < 6) {
             toaster('Password must contain at least 6 characters!');
@@ -153,7 +153,7 @@ const Register = () => {
                     </div>
                 </div>
 
-                <div className='outline-none flex flex-col mb-2  px-2'>
+                {/* <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
                         <LockOutlined />
                         <div className='text-gray-600'>Confirm Passowrd</div>
@@ -162,7 +162,7 @@ const Register = () => {
                         <input value={cpwd} onChange={e => setCpwd(e.target.value)} type="text"
                             className='py-2 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='confirm the password' name="cpwd" id="cpwd" />
                     </div>
-                </div>
+                </div> */}
 
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
