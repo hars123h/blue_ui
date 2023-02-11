@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.mine_image {
+    background-image: url('./images/bg_blue2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+progress {
+    border-radius: 2px; 
+    height: 10px;
+  }
+  progress::-webkit-progress-bar {
+    background-color: gray;
+    border-radius: 2px;
+  }
+  progress::-webkit-progress-value {
+    background-color: orange;
+    border-radius: 2px;
+  }
+
+  .text_outline {
+    color: orange;
+    text-shadow:
+     -1px -1px 0 #757373,  
+      1px -1px 0 #767474, 
+      -1px 1px 0 #6e6d6d, 
+       1px 1px 0 #7c7b7b, 
+  }
