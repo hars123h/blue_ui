@@ -11,14 +11,39 @@ const Team = () => {
   const [teamDetails, setTeamDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentVisible, setCurrentVisible] = useState('level1');
+  const [level1, setLevel1] = useState([]);
+  const [level2, setLevel2] = useState([]);
+  const [level3, setLevel3] = useState([]);
+
 
   const getUserDetails = async () => {
     const details = await axios.post(`${BASE_URL}/get_user`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data);
     const details2 = await axios.post(`${BASE_URL}/team_sum`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data);
-    //console.log(details);
+    const lvl1 = await details.directMember.map(async(member_id)=> {
+      const mm_data = await axios.post(`${BASE_URL}/get_user`, { user_id: member_id }).then(({ data }) => data);
+      setLevel1([...level1, {
+        mobno:mm_data.mobno,
+        totalRecharge:mm_data.recharge_amount
+      }])
+    })
+
+    const lvl2 = await details.indirectMember.map(async(member_id)=> {
+      const mm_data = await axios.post(`${BASE_URL}/get_user`, { user_id: member_id }).then(({ data }) => data);
+      setLevel2([...level2, {
+        mobno:mm_data.mobno,
+        totalRecharge:mm_data.recharge_amount
+      }])
+    })
+
+    const lvl3 = await details.in_indirectMember.map(async(member_id)=> {
+      const mm_data = await axios.post(`${BASE_URL}/get_user`, { user_id: member_id }).then(({ data }) => data);
+      setLevel3([...level3, {
+        mobno:mm_data.mobno,
+        totalRecharge:mm_data.recharge_amount
+      }])
+    })
     setUserDetails(details);
     setTeamDetails(details2);
-    //console.log(details2);
   }
 
   useLayoutEffect(() => {
@@ -65,7 +90,8 @@ const Team = () => {
               <div>Level 1 Earning: &#8377;{userDetails.directRecharge}</div>
             </div>
 
-            {teamDetails!==null && teamDetails?.level1.map((element, index) => {
+            {teamDetails!==null && level1.map((element, index) => {
+              console.log(element);
               return (
                 <div key={index} className='flex flex-row text-[#16a4ba] font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -89,7 +115,7 @@ const Team = () => {
               <div>Level 2 Earning: &#8377;{userDetails.indirectRecharge}</div>
             </div>
 
-            {teamDetails!==null && teamDetails?.level2.map((element, index) => {
+            {teamDetails!==null && level2.map((element, index) => {
               return (
                 <div key={index} className='flex flex-row text-[#16a4ba] font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -113,7 +139,7 @@ const Team = () => {
               <div>Level 3 Earning: &#8377;{userDetails.in_indirectRecharge}</div>
             </div>
 
-            {teamDetails!==null && teamDetails?.level3.map((element, index) => {
+            {teamDetails!==null && level3.map((element, index) => {
               return (
                 <div key={index} className='flex flex-row text-[#16a4ba] font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -129,10 +155,7 @@ const Team = () => {
             })}
           </div>
         )}
-
-
       </div>
-
     </div>
   )
 }

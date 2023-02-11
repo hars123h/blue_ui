@@ -162,8 +162,11 @@ const Mine = () => {
         </div>
 
         <div className="box  bg-[#fafff9] relative  shadow-xl mx-4 mt-16 border border-gray-300">
-          <img src={new_invite_image} alt="invite_image" className='rounded-xl h-16 w-full' />
-          <div className='rounded-full shadow-xl font-bold w-[85%] text-center absolute top-3 left-6 z-10 bg-orange-600 text-white py-2 px-4 '>Invite Friends right away!</div>
+          <img src={new_invite_image} alt="invite_image" className='rounded-xl w-full' />
+          <div className='flex flex-col gap-5 absolute top-5 left-5 justify-around'>
+            <div className='text-2xl font-extrabold text-white'>Invite friends to make money</div>
+            <div className='shadow-2xl px-4 text-center py-1 rounded-full font-extrabold text-white text-lg button_bg'>Implement friends right away</div>
+          </div>        
         </div>
 
         <div className="box mb-20 gap-1 flex flex-col text-gray-500 font-semibold bg-[#fafff9] rounded-xl  shadow-xl m-3 border border-gray-300">
@@ -292,8 +295,8 @@ const Mine = () => {
         {/*Navigation Bar 2*/}
         <div className="fixed bottom-0 z-10 bg-white  rounded-none text-gray-800 flex overflow-x-hidden  mx-auto mt-2 border-2 border-gray-200 shadow-xl w-full overflow-y-hidden">
           <div className="flex flex-row justify-around items-center w-full py-2">
-            <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={()=>navigate('/home')}>
-              <img src={make_money} alt="online" className='w-4'  />
+            <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/home')}>
+              <img src={make_money} alt="online" className='w-4' />
               <div className='text-xs pt-1'>make money</div>
             </div>
 

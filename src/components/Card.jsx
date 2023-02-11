@@ -10,7 +10,7 @@ const Card = ({product_type, product_image, plan_name, plan_type, plan_amount, p
  
   return (
     <div className='mx-2 mb-1 shadow-2xl rounded-xl bg-[#fafff9] p-3 border border-gray-400'>
-        <div className="title text-[#464945] font-bold text-2xl">{plan_name}</div>        
+        <div className="title text-[#464945] font-bold text-lg">{plan_name}</div>        
         <div className="info p-2 text-sm flex items-center gap-2">
             <img src={wind_turbines} alt="comp_img" className='shadow-lg h-14' />
             <div className='text-md w-full flex flex-col gap-2'>
@@ -38,7 +38,7 @@ const Card = ({product_type, product_image, plan_name, plan_type, plan_amount, p
 
             
         </div>
-        <div className="cursor-pointer btn text-white text-center  p-2 mt-1 text-md rounded-full shadow-md  w-4/5 mx-auto bg-[#1cb5b2]"
+        <div className="cursor-pointer btn text-white font-extrabold text-center  py-1  px-2 mt-1 text-md rounded-full shadow-md  w-4/5 mx-auto bg-[#1cb5b2]"
             onClick={()=>handleClick(product_type ,plan_name, plan_type, plan_amount, plan_daily_earning, plan_cycle)}>Invest</div>
     </div>
   )
