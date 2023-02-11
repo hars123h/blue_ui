@@ -3,17 +3,17 @@
   "name": "Web based Application",
   "icons": [
     {
-      "src": "amaz_logi_new.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "windharvester_logo.ico",
+      "sizes": "64x10 32x10 24x10 16x10",
       "type": "image/x-icon"
     },
     {
-      "src": "amaz_logi.png",
+      "src": "windharvester_logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "amaz_logi.png",
+      "src": "windharvester_logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
