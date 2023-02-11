@@ -4,18 +4,18 @@
   "icons": [
     {
       "src": "windharvester_logo.ico",
-      "sizes": "64x10 32x10 24x10 16x10",
+      "sizes": "200x54",
       "type": "image/x-icon"
     },
     {
       "src": "windharvester_logo.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "200x54"
     },
     {
       "src": "windharvester_logo.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "200x54"
     }
   ],
   "start_url": ".",
