@@ -174,7 +174,7 @@ const ShortPlans = () => {
                 </div>
             </div> : null}
 
-            <div className='bg-[#1eb5b0] py-3 shadow-lg px-3 flex justify-center items-center'>
+            <div className='bg-blue-600 py-3 shadow-lg px-3 flex justify-center items-center'>
                 <div className='text-white text-sm'>Financial</div>
             </div>
 
@@ -265,11 +265,6 @@ const ShortPlans = () => {
                                 <Card product_type={"short"} product_image={amaz_short4} handleClick={handleClick} plan_name={"Windharvester 16"} plan_cycle={18} plan_daily_earning={1400} plan_amount={10000} plan_type={'Short Plan'} />
                             </span>
                             )}
-
-
-
-
-
                     </div>)}
             </div>
 

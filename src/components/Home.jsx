@@ -215,7 +215,7 @@ const Home = () => {
                 <div className='text-gray-500 text-sm'>Switch Language{">"}</div>
             </div>
             {/* <Slider /> */}
-            <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5 border border-gray-300">
+            <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5 border border-gray-300" onClick={()=>navigate('/invite')}>
                 <img src={new_invite_image} alt="invite_image" className='rounded-xl'/>
                 <div className='flex flex-col  absolute top-1 left-2 m-1'>
                     <div className='text-2xl font-extrabold text-white'>Invite friends to</div>

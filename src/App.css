@@ -5,9 +5,9 @@ body {
 }
 
 .mine_image {
-    background-image: url('./images/bg_blue2.png');
+    background-image: url('./images/bg_blue_small2.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:contain;
 }
 
 progress {
