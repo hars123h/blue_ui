@@ -74,7 +74,9 @@ const Project = () => {
                                 ...element
                             }
                         }
-                        ti+=element.plan_daily_earning;
+                        if((DateDifference(new Date(element.date_purchased), new DateDifference(element.date_till_rewarded)))>=1) {
+                            ti+=element.plan_daily_earning;
+                        }
                         ai+= DateDifference(new Date(element.date_purchased), new Date(element.date_till_rewarded)) * element.quantity * element.plan_daily_earning;
                         //console.log(ai);
                         earn = earn + (days * element.quantity * element.plan_daily_earning);

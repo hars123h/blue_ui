@@ -15,8 +15,6 @@ import dividend from '../images/dividend.png';
 import invite_bg from '../images/invite_bg.png';
 
 
-
-
 const Mine = () => {
 
   const navigate = useNavigate();
