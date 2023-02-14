@@ -29,6 +29,7 @@ import amaz_short3 from '../images/amaz_short3.jpg';
 import amaz_short4 from '../images/amaz_short4.jpg';
 import { VolumeUpOutlined } from '@material-ui/icons';
 import new_invite_image from '../images/new_invite_image.png';
+import invite_bg from '../images/invite_bg.png';
 import windharvester_logo from '../images/windharvester_logo.png';
 import rent from '../images/rent.png';
 import financial from '../images/financial.png';
@@ -213,11 +214,10 @@ const Home = () => {
             </div>
             {/* <Slider /> */}
             <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5 border border-gray-300" onClick={() => navigate('/invite')}>
-                <img src={new_invite_image} alt="invite_image" className='rounded-xl' />
+                <img src={invite_bg} alt="invite_image" className='rounded-xl' />
                 <div className='flex flex-col  absolute top-1 left-2 m-1'>
-                    <div className='text-2xl font-extrabold text-white'>Invite friends to</div>
-                    <div className='text-2xl font-extrabold text-white'>make money together</div>
-                    <div className='shadow-xl px-4 py-1 rounded-full text-white text-xl font-extrabold button_bg'>Implement friends right away</div>
+                    <div className='text-2xl font-extrabold text-white'>Invite friends to make money together</div>
+                    <div className='text-center shadow-xl px-4 py-1 rounded-full text-white text-xl font-extrabold button_bg'>Implement friends right away</div>
                 </div>
             </div>
             <div>

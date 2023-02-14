@@ -12,6 +12,8 @@ import financial from '../images/financial.png';
 import user from '../images/user.png';
 import make_money from '../images/make_money.png';
 import dividend from '../images/dividend.png';
+import invite_bg from '../images/invite_bg.png';
+
 
 
 
@@ -148,7 +150,7 @@ const Mine = () => {
         </div>
 
         <div className="box  bg-[#fafff9] relative  shadow-xl mx-4 mt-16 border border-gray-300" onClick={()=>navigate('/invite')}>
-          <img src={new_invite_image} alt="invite_image" className='rounded-xl w-full' />
+          <img src={invite_bg} alt="invite_image" className='rounded-xl w-full' />
           <div className='flex flex-col gap-5 absolute top-5 left-5 justify-around'>
             <div className='text-2xl font-extrabold text-white'>Invite friends to make money</div>
             <div className='shadow-2xl px-4 text-center py-1 rounded-full font-extrabold text-white text-lg button_bg'>Implement friends right away</div>
