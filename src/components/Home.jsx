@@ -268,7 +268,7 @@ const Home = () => {
             {/*Plans Cards*/}
             <div className="card_grid grid grid-cols-1 sm:w-3/5 lg:w-3/5 w-[90%] mx-auto mt-2 mb-20">
 
-                {currentVisible === 'big' && (
+                {userDetails && amountDetails?.plan_state && (
                     <div className='grid grid-cols-1 gap-1'>
                         {userDetails && (amountDetails.plan_state[0] === 0) ? (
                             <span className='pointer-events-none'>
