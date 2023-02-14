@@ -82,7 +82,7 @@ const Login = () => {
     }
 
     return (
-        <div className='relative h-screen bg-cyan-400 overflow-hidden'>
+        <div className='relative h-screen bg-cyan-400 '>
             {toasterShow?<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
@@ -94,8 +94,8 @@ const Login = () => {
                 </div> : null}
                 <div className='text-sm'>{text}</div>
             </div> : null}
-            <div className='text-center'>
-                <img src={wind_login} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 pt-20 mb-8' width={150} />
+            <div className='text-center pt-20'>
+                <img src={wind_login} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mb-8' width={150} />
             </div>
             <div className='flex flex-col m-auto w-5/6 mt-2'>
                 <div className=" items-center justify-center mb-3 p-2 phoneno flex  bg-[#f1f1f1] rounded-full">
