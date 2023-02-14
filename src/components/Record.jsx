@@ -54,7 +54,7 @@ const Record = () => {
     return (
         <div className=' bg-[#f7f9f8] pb-3 sm:h-[1000px] md:h-screen h-screen'>
 
-            <div className="options text-center text-white flex gap-2 items-center p-2  bg-blue-600 text-lg pt-2 font-medium">
+            <div className="options text-center text-white flex gap-2 items-center p-2  bg-cyan-400 text-lg pt-2 font-medium">
                 <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate('/mine')} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                 </svg>
@@ -63,7 +63,7 @@ const Record = () => {
 
 
             {/* This is the curved part */}
-            <div className='records w-full flex bg-blue-600 items-center text-sm font-bold'>
+            <div className='records w-full flex bg-cyan-400 items-center text-sm font-bold'>
                 <div className={`h-[40px] cursor-pointer flex items-center justify-center w-1/3 text-center ${currentRecord === 'recharges' ? 'border-b border-white text-white' : ''}`} onClick={() => setCurrentRecord('recharges')}>Recharge</div>
                 <div className={`h-[40px] cursor-pointer flex items-center justify-center w-1/3 text-center ${currentRecord === 'withdrawals' ? 'border-b border-white text-white' : ''}`} onClick={() => setCurrentRecord('withdrawals')}>Withdrawls</div>
                 <div className={`h-[40px] cursor-pointer flex items-center justify-center w-1/3 text-center ${currentRecord === 'all' ? 'border-b border-white text-white' : ''}`} onClick={() => setCurrentRecord('all')}>All Types</div>
@@ -110,10 +110,10 @@ const Record = () => {
                         <div key={id} className='custom_card mt-3 bg-[#ffffff] mx-auto w-full flex flex-col items-center p-2 shadow-2xl border border-gray-300 rounded-xl'>
                             <div className='flex justify-between items-center w-full'>
                                 <div className='flex flex-col gap-1 font-semibold'>
-                                    <div className='text-blue-600 text-md overflow-clip'><span className='font-bold text-gray-500'>Recharge Value:</span> &#8377;{new Intl.NumberFormat().format(element.recharge_value)}</div>
-                                    <div className='text-blue-600 text-md overflow-clip'><span className='font-bold text-gray-500'>Ref No:</span> {element.refno}</div>
-                                    <div className='text-blue-600 text-md overflow-clip'><span className='font-bold text-gray-500'>Status:</span> {nameMapper[String(element.status)]}</div>
-                                    <div className='text-blue-600 text-md overflow-clip'><span className='font-bold text-gray-500'>Date:</span> {new Date(element.time).toLocaleString(undefined, { timeZone: 'Asia/Kolkata' })}</div>
+                                    <div className='text-cyan-400 text-md overflow-clip'><span className='font-bold text-gray-500'>Recharge Value:</span> &#8377;{new Intl.NumberFormat().format(element.recharge_value)}</div>
+                                    <div className='text-cyan-400 text-md overflow-clip'><span className='font-bold text-gray-500'>Ref No:</span> {element.refno}</div>
+                                    <div className='text-cyan-400 text-md overflow-clip'><span className='font-bold text-gray-500'>Status:</span> {nameMapper[String(element.status)]}</div>
+                                    <div className='text-cyan-400 text-md overflow-clip'><span className='font-bold text-gray-500'>Date:</span> {new Date(element.time).toLocaleString(undefined, { timeZone: 'Asia/Kolkata' })}</div>
 
                                 </div>
 

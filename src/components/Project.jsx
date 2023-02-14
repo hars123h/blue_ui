@@ -146,7 +146,7 @@ const Project = () => {
                 {/* <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                 </svg> */}
-                <div className='flex-grow text-center text-sm bg-blue-600 py-2'>Project Record</div>
+                <div className='flex-grow text-center text-sm bg-[#25c6da] py-2'>Project Record</div>
             </div>
 
             {/* This is the curved part */}
@@ -198,7 +198,7 @@ const Project = () => {
 
             <div className=' mx-auto w-full mt-2 pb-10'>
                 {
-                    current_tab === 'earning' && userDetails && ('plans_purchased' in userDetails) && (
+                     userDetails && ('plans_purchased' in userDetails) && (
                         userDetails.plans_purchased.map((element, index) => {
                             if (element.plan_daily_earning * element.plan_cycle !== DateDifference(new Date(element.date_purchased), new Date(element.date_till_rewarded)) * element.quantity * element.plan_daily_earning) {
                                 return (
@@ -219,6 +219,39 @@ const Project = () => {
                                             </div>
                                         </div>
                                         <div className='text-white w-[70%] mx-auto rounded-full py-2 mt-4 text-sm text-center bg-gray-400'>
+                                            {(element.plan_daily_earning * element.plan_cycle === DateDifference(new Date(element.date_purchased), new Date(element.date_till_rewarded)) * element.quantity * element.plan_daily_earning) ? 'Finished' : 'Running'}
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        })
+                    )
+                }
+            </div>
+
+            <div className=' mx-auto w-full mt-2 pb-10'>
+                {
+                     userDetails && ('plans_purchased' in userDetails) && (
+                        userDetails.plans_purchased.map((element, index) => {
+                            if (!(element.plan_daily_earning * element.plan_cycle !== DateDifference(new Date(element.date_purchased), new Date(element.date_till_rewarded)) * element.quantity * element.plan_daily_earning)) {
+                                return (
+                                    <div className='custom_card -translate-y-14 bg-[#ffffff] mt-2 mx-auto w-[90%] flex flex-col items-center p-3 shadow-2xl border border-gray-300 rounded-xl'>
+                                        <div className="w-full mx-3">
+                                            <div className='text-lg font-bold'>{element.plan_name}</div>
+                                            <div className='text-gray-500 text-xs'>Purschase Date: {element.date_purchased}</div>
+                                            <div className='text-red-500 text-xs'>End Date: {addDays(new Date(element.date_purchased), element.plan_cycle).toDateString()}</div>
+                                        </div>
+                                        <div className='flex w-full justify-around p-2 mt-5'>
+                                            <div className='flex flex-col items-center border-r-2 border-gray-400 pr-4'>
+                                                <div className='text-black font-bold'><span className='text-[#10a6b7]'>&#8377;</span> {element.plan_amount}</div>
+                                                <div className='text-xs text-gray-400'>Investment Amount</div>
+                                            </div>
+                                            <div className='flex flex-col items-center'>
+                                                <div className='text-black font-bold'><span className='text-[#10a6b7]'>&#8377;</span> {DateDifference(new Date(element.date_purchased), new Date(element.date_till_rewarded)) * element.quantity * element.plan_daily_earning}</div>
+                                                <div className='text-xs text-gray-400'>Received Amount</div>
+                                            </div>
+                                        </div>
+                                        <div className='text-white w-[70%] mx-auto rounded-full py-2 mt-4 text-sm text-center bg-cyan-400'>
                                             {(element.plan_daily_earning * element.plan_cycle === DateDifference(new Date(element.date_purchased), new Date(element.date_till_rewarded)) * element.quantity * element.plan_daily_earning) ? 'Finished' : 'Running'}
                                         </div>
                                     </div>

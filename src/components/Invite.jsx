@@ -64,8 +64,8 @@ const Invite = () => {
                 </svg>
             </div>
 
-            <div className="info p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-blue-600 font-bold mt-5">
-                <div className='text-center text-lg border-b border-blue-600'>Agent Rewards</div>
+            <div className="info p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-cyan-400 font-bold mt-5">
+                <div className='text-center text-lg border-b border-cyan-400'>Agent Rewards</div>
                 Level 1, {amountDetails.level1_percent}%
                 <br />
                 Level 2, {amountDetails.level2_percent}%
@@ -75,19 +75,19 @@ const Invite = () => {
 
             <div className="flex gap-2">
 
-                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-blue-600 font-bold mt-5">
+                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-cyan-400 font-bold mt-5">
                     <div className='font-bold'>Invitation Link</div>
-                    <div className='p-3 rounded-md border overflow-hidden border-blue-600'>{`https://www.amazfit44.tech/register/invite_code/${userDetails.user_invite}`}</div>
+                    <div className='p-3 rounded-md border overflow-hidden border-cyan-400'>{`https://www.amazfit44.tech/register/invite_code/${userDetails.user_invite}`}</div>
                     <CopyToClipboard text={`https://www.amazfit44.tech/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('Copied to clipboard')}>
-                        <span className='mx-auto bg-blue-600 text-white p-2 rounded-md'>Copy Link</span>
+                        <span className='mx-auto bg-cyan-400 text-white p-2 rounded-md'>Copy Link</span>
                     </CopyToClipboard>
                 </div>
 
-                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-blue-600 font-bold mt-5">
+                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-cyan-400 font-bold mt-5">
                     <div className='font-bold'>Invitation code</div>
-                    <div className='p-3 rounded-md border border-blue-600'>{userDetails.user_invite}</div>
+                    <div className='p-3 rounded-md border border-cyan-400'>{userDetails.user_invite}</div>
                     <CopyToClipboard text={userDetails.user_invite} onCopy={() => toaster('Copied to clipboard')}>
-                        <span className='mx-auto bg-blue-600 text-white p-2 rounded-md'>Copy code</span>
+                        <span className='mx-auto bg-cyan-400 text-white p-2 rounded-md'>Copy code</span>
                     </CopyToClipboard>
                 </div>
 
@@ -101,7 +101,7 @@ const Invite = () => {
                     value={`https://www.amazfit44.tech/register/invite_code/${userDetails.user_invite}`}
                     viewBox={`0 0 120 120`}
                 />
-                <div className='text-blue-600 font-extrabold text-center mt-1'>QR code</div>
+                <div className='text-cyan-400 font-extrabold text-center mt-1'>QR code</div>
             </div>
         </div>
     )
