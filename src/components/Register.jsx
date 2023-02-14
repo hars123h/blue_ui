@@ -118,7 +118,7 @@ const Register = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 Register</div>
-            <div className="box mb-20 m-auto gap-1 mt-2 lg:w-2/5 w-5/5 p-4 w-50% flex flex-col">
+            <div className="box mb-20 m-auto gap-1 mt-2 lg:w-2/5 w-5/5 px-4 pb-4 pt-16 w-50% flex flex-col">
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
                         <PhoneAndroid style={{color:'gray'}} />

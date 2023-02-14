@@ -95,7 +95,7 @@ const Login = () => {
                 <div className='text-sm'>{text}</div>
             </div> : null}
             <div className='text-center'>
-                <img src={wind_login} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 pt-4 mb-8' width={150} />
+                <img src={wind_login} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 pt-20 mb-8' width={150} />
             </div>
             <div className='flex flex-col m-auto w-5/6 mt-2'>
                 <div className=" items-center justify-center mb-3 p-2 phoneno flex  bg-[#f1f1f1] rounded-full">

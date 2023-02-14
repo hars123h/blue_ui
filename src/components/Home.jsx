@@ -49,8 +49,25 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        backgroundColor:'white',
     },
 };
+
+const customStyles2 = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor:'white',
+        border:'none',
+        padding:0,
+        width:'80%'
+    },
+};
+
 
 const Home = () => {
 
@@ -222,14 +239,14 @@ const Home = () => {
             <div>
                 <ReactModal
                     isOpen={welcomeShow}
-                    style={customStyles}
+                    style={customStyles2}
                     contentLabel="Notice"
                     ariaHideApp={false}
                 >
-                    <div className=' w-full rounded-lg shadow-xl z-10'>
+                    <div className='w-full rounded-lg shadow-xl z-10  border border-gray-400'>
                         <div className='flex gap-2 flex-col bg-white w-full text-blue-500 rounded-md'>
                             <div className='bg-cyan-400 text-center p-1 text-lg shadow-md text-white'>Notice</div>
-                            <div className='flex flex-col p-2 text-gay-600 gap-2 font-bold'>
+                            <div className='flex flex-col p-2 text-gray-600 text-xs gap-2 font-bold'>
                                 <div>Welcome to Wind Harvester investment Platform</div>
                                 <div>Let Wind Harvester create unlimited wealth with you.</div>
                                 <div>The Windharvester 44 APP is officialy launched, let us walk together on the road to wealth.</div>
