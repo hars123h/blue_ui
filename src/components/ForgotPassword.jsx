@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useState } from 'react';
 import axios from 'axios';
 import BASE_URL from '../api_url';
 
@@ -23,6 +23,10 @@ const ForgotPassword = () => {
             //navigate('/mine');
         },5000);
     }
+
+    useEffect(()=>{
+        document.body.style.backgroundColor = "#f7f9f8";
+    },[]);
 
     const handleMessage = () => {
         if (mobno.length !== 10) {
@@ -48,7 +52,7 @@ const ForgotPassword = () => {
     }
 //[#0096D5] [#0096D5] [#0096D5]
     return (
-        <div className='bg-[#f7f9f8] h-screen relative'>
+        <div className='bg-[#f7f9f8] relative'>
             {toasterShow?<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md text-center'>
                     <div>{toasterText}</div>
