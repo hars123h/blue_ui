@@ -52,6 +52,7 @@ const Rewards = () => {
         } else if (response.message === 'Invalid Promo Code') {
             toaster('Invalid Promo Code');
         } else {
+            console.log(response.reward);
             toaster(`₹${response.reward}`);
         }
     }
@@ -68,7 +69,7 @@ const Rewards = () => {
                 <div className={`flex relative gap-2 ${toasterText.includes('₹')===false?'bg-black opacity-80 text-white px-2 py-1':''} rounded-md`}>
                     {toasterText.includes('₹')?(<>
                         <img src={envelope} alt="envelope" width={180} className="rounded-lg pt-5"/>
-                        <div className='absolute text-red-500 font-extrabold bg-[#fff2d8] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>{toasterText}25</div>
+                        <div className='absolute text-red-500 font-extrabold bg-[#fff2d8] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>{toasterText}</div>
                     </>):(
                         <div>{toasterText}</div>
                     )}
