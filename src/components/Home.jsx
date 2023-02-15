@@ -122,6 +122,7 @@ const Home = () => {
     }, []);
 
     useLayoutEffect(() => {
+        document.body.style.backgroundColor = "#eaf4eb";
         getUserDetails();
     }, []);
 

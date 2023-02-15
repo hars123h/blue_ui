@@ -68,7 +68,7 @@ const ClientFeedback = () => {
                 <input placeholder='Date' type="date" onChange={e => setDetails({ ...details, date: e.target.value })}
                     className='w-full bg-[#e0e5e1] px-2 rounded-lg outline-none text-[#16a4ba] py-2  font-normal text-lg' />
                 <div className="flex justify-center items-center">
-                    <Button className='w-1/5' variant="contained" style={{ color: 'white', backgroundColor: '#2563eb' }} onClick={handleSubmit}>Submit</Button>
+                    <Button className='w-1/5' variant="contained" style={{ color: 'white', backgroundColor: '#26C6DA' }} onClick={handleSubmit}>Submit</Button>
                 </div>
             </div>
         </div>

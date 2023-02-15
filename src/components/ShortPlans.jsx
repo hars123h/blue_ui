@@ -94,6 +94,7 @@ const ShortPlans = () => {
     }
 
     useLayoutEffect(() => {
+        document.body.style.backgroundColor = "#eaf4eb";
         getUserDetails();
     }, []);
 
