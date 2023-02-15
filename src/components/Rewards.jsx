@@ -6,6 +6,7 @@ import { RotatingLines } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import BASE_URL from '../api_url';
 import reward1 from '../images/reward1.svg';
+import envelope from '../images/envelope.jpg';
 
 const Rewards = () => {
 
@@ -25,7 +26,7 @@ const Rewards = () => {
         setTimeout(() => {
             setToasterShow(false);
             //navigate('/mine');
-        }, 2000);
+        }, 3000);
     }
 
     const getReward1 = async () => {
@@ -63,9 +64,14 @@ const Rewards = () => {
 
     return (
         <div className='md:h-screen  xs:h-[700px] bg-blue-50  h-screen relative'>
-            {toasterShow ? <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
-                    <div>{toasterText}</div>
+            {toasterShow ? <div className='absolute top-1/2 z-30 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md'>
+                <div className={`flex relative gap-2 ${toasterText.includes('₹')===false?'bg-black opacity-80 text-white px-2 py-1':''} rounded-md`}>
+                    {toasterText.includes('₹')?(<>
+                        <img src={envelope} alt="envelope" width={180} className="rounded-lg pt-5"/>
+                        <div className='absolute text-red-500 font-extrabold bg-[#fff2d8] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>{toasterText}25</div>
+                    </>):(
+                        <div>{toasterText}</div>
+                    )}
                 </div>
             </div> : null}
 
