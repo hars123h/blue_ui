@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import referralCodeGenerator from 'referral-code-generator'
@@ -42,6 +42,10 @@ const Register = () => {
             //navigate('/mine');
         },5000);
     }
+
+    useEffect(()=>{
+        document.body.style.backgroundColor = "#f4fbf4";
+    },[]);
 
     const handleRegister = async () => {
 
@@ -103,7 +107,7 @@ const Register = () => {
     }
 //[#0096D5]
     return (
-        <div className='relative h-screen bg-[#f4fbf4]'>
+        <div className='relative bg-[#f4fbf4]'>
             {toasterShow ? <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
