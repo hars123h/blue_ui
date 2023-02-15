@@ -52,7 +52,7 @@ const Rewards = () => {
         } else if (response.message === 'Invalid Promo Code') {
             toaster('Invalid Promo Code');
         } else {
-            toaster(`The Reward of ₹${response.reward} has been successfully added`);
+            toaster(`₹${response.reward}`);
         }
     }
 
