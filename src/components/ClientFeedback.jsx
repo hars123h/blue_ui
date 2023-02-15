@@ -50,12 +50,11 @@ const ClientFeedback = () => {
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
-            <div className="top p-3 cursor-pointer flex bg-cyan-400">
-                <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-                    className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+            <div className="top p-3 cursor-pointer flex items-center bg-cyan-400">
+            <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
-                <div className='text-center  flex-grow font-semibold text-xl'>
+                <div className='text-center  flex-grow font-semibold text-md'>
                     Feedback
                 </div>
             </div>

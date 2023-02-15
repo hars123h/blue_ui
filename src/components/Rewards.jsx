@@ -74,9 +74,9 @@ const Rewards = () => {
                 <div className='text-sm text-cyan-400'>Loading...</div>
             </div> : <>
                 <div className="options text-center text-white flex gap-2 items-center p-2  bg-cyan-400 text-lg pt-2 font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
                     <div className='flex-grow text-center text-sm'>Rewards</div>
                 </div>
 

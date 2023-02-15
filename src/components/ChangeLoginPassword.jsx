@@ -51,9 +51,10 @@ const ChangeLoginPassword = () => {
                 </div>
             </div>:null}
             <div className="options text-center flex bg-cyan-400 shadow-lg font-medium items-center p-3">
+
                 <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate('/settings', { state: { withdrawalPassword: loc.state.withdrawalPassword, loginPassword: loc.state.loginPassword } })} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
                 className="w-4 h-4   storke-white  cursor-pointer stroke-white">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
                 <div className='text-white text-sm flex-grow'>Change Login Password</div>
             </div>

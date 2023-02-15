@@ -125,7 +125,7 @@ const Project = () => {
                         strokeColor="grey"
                         strokeWidth="2"
                         animationDuration="0.75"
-                        width="96"
+                        width="40"
                         visible={true}
                     />
                     <div className='text-lg text-gray-500'>Loading...</div>

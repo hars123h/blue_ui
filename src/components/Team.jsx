@@ -21,7 +21,7 @@ const Team = () => {
     const arr1 = await axios.post(`${BASE_URL}/lvl1`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data.level1);
     const arr2 = await axios.post(`${BASE_URL}/lvl2`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data.level2);
     const arr3 = await axios.post(`${BASE_URL}/lvl3`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data.level3);
-    
+
     setUserDetails(details);
     setLevel1(arr1);
     setLevel2(arr2);
@@ -29,7 +29,7 @@ const Team = () => {
   }
 
   useLayoutEffect(() => {
-    getUserDetails().then(()=>{
+    getUserDetails().then(() => {
       setLoading(false);
     })
   }, []);
@@ -47,9 +47,8 @@ const Team = () => {
       {/* [#2e9afe] */}
       <div className="top flex items-center my-auto text-center h-10 p-1 bg-cyan-400 text-white text-lg font-medium">
         <div className='absolute flex w-32 cursor-pointer' onClick={() => navigate(-1)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-            className="w-4 h-4   storke-white  cursor-pointer stroke-white">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+          <svg xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </div>
         <div className='flex-grow'>Team</div>
@@ -67,7 +66,7 @@ const Team = () => {
           <div className='p-3 text-center text-lg w-1/3 rounded-t-lg border border-gray-300 shadow-cyan-400 shadow-lg text-cyan-400' onClick={e => setCurrentVisible('level3')}>Level 3</div>
         </div>
 
-        {currentVisible === 'level1'  && (
+        {currentVisible === 'level1' && (
           <div className='flex text-cyan-400 items-center font-semibold flex-col w-[90%] border border-gray-300 text-lg p-3 m-3 mt-0 shadow-lg shadow-blue-400 rounded-lg'>
             <div className='flex flex-col w-full'>
               <div>Level 1 Member: {userDetails.directMember.length}</div>
@@ -98,7 +97,7 @@ const Team = () => {
               <div>Level 2 Earning: &#8377;{userDetails.indirectRecharge}</div>
             </div>
 
-            { level2.map((element, index) => {
+            {level2.map((element, index) => {
               return (
                 <div key={index} className='flex flex-row text-cyan-400 font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>
@@ -122,7 +121,7 @@ const Team = () => {
               <div>Level 3 Earning: &#8377;{userDetails.in_indirectRecharge}</div>
             </div>
 
-            { level3.map((element, index) => {
+            {level3.map((element, index) => {
               return (
                 <div key={index} className='flex flex-row text-cyan-400 font-semibold justify-between w-full border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-gray-400 rounded-lg'>
                   <div>

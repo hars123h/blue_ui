@@ -40,6 +40,7 @@ const Mine = () => {
 
 
   useLayoutEffect(() => {
+    document.body.style.backgroundColor = "white";
     const getUserInfo = async () => {
       const docRef = await axios.post(`${BASE_URL}/get_user`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data);
       if (docRef) {
@@ -95,7 +96,7 @@ const Mine = () => {
           strokeColor="grey"
           strokeWidth="2"
           animationDuration="0.75"
-          width="96"
+          width="40"
           visible={true}
         />
         <div>Loading...</div>
@@ -104,7 +105,7 @@ const Mine = () => {
   }
 
   return (
-    <div className='relative '>
+    <div className='relative h-screen bg-white'>
       {toasterShow ?
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
