@@ -60,7 +60,7 @@ const Team = () => {
       <div className='flex flex-col items-center w-full'>
         <div className='flex text-cyan-400 font-semibold flex-col items-center w-[90%] border border-gray-300 text-lg p-3 m-3 shadow-lg shadow-cyan-400 rounded-lg'>
           <div>Total Member: {userDetails.directMember.length + userDetails.indirectMember.length + userDetails.in_indirectMember.length}</div>
-          <div>Total Team Commission: &#8377;{userDetails.directRecharge + userDetails.indirectRecharge + userDetails.in_indirectRecharge}</div>
+          <div>Total Team Commission: &#8377;{(userDetails.directRecharge*(amountDetails.level1_percent)/100) + (userDetails.indirectRecharge*(amountDetails.level2_percent)/100) + (userDetails.in_indirectRecharge*(amountDetails.level3_percent)/100)}</div>
         </div>
 
         <div className="flex items-center  w-[90%]">
