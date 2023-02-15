@@ -68,7 +68,7 @@ function App() {
 
   return (
     <AmountContext.Provider value={amounts}>
-      <div className="app relative h-screen flex flex-col">
+      <div className="app relative ">
         <Routes>
           <Route path="/" element={<Fallback />} />
           <Route path="/register" element={<Register />} />
