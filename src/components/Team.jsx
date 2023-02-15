@@ -4,6 +4,8 @@ import { useState, useLayoutEffect } from 'react';
 import { getAuth } from 'firebase/auth';
 import axios from 'axios';
 import BASE_URL from '../api_url';
+import { AmountContext } from '../App';
+import { useContext } from 'react';
 
 const Team = () => {
   const navigate = useNavigate();
@@ -14,6 +16,7 @@ const Team = () => {
   const [level1, setLevel1] = useState([]);
   const [level2, setLevel2] = useState([]);
   const [level3, setLevel3] = useState([]);
+  const amountDetails = useContext(AmountContext);
 
 
   const getUserDetails = async () => {
@@ -70,7 +73,7 @@ const Team = () => {
           <div className='flex text-cyan-400 items-center font-semibold flex-col w-[90%] border border-gray-300 text-lg p-3 m-3 mt-0 shadow-lg shadow-blue-400 rounded-lg'>
             <div className='flex flex-col w-full'>
               <div>Level 1 Member: {userDetails.directMember.length}</div>
-              <div>Level 1 Earning: &#8377;{userDetails.directRecharge}</div>
+              <div>Level 1 Earning: &#8377;{(userDetails.directRecharge)/(amountDetails.level1_percent/100)}</div>
             </div>
 
             {level1.map((element, index) => {
@@ -83,7 +86,7 @@ const Team = () => {
 
                   </div>
                   <div>+91 {element.mobno}</div>
-                  <div>&#8377; {element.recharge_amount}</div>
+                  <div>&#8377; {(element.recharge_amount)/(amountDetails.level1_percent/100)}</div>
                 </div>
               )
             })}
@@ -94,7 +97,7 @@ const Team = () => {
           <div className='flex text-cyan-400 items-center font-semibold flex-col w-[90%] border border-gray-300 text-lg p-3 m-3 mt-0 shadow-lg shadow-blue-400 rounded-lg'>
             <div className='flex flex-col w-full'>
               <div>Level 2 Member: {userDetails.indirectMember.length}</div>
-              <div>Level 2 Earning: &#8377;{userDetails.indirectRecharge}</div>
+              <div>Level 2 Earning: &#8377;{(userDetails.indirectRecharge)/(amountDetails.level2_percent/100)}</div>
             </div>
 
             {level2.map((element, index) => {
@@ -107,7 +110,7 @@ const Team = () => {
 
                   </div>
                   <div>+91 {element.mobno}</div>
-                  <div>&#8377; {element.recharge_amount}</div>
+                  <div>&#8377; {(element.recharge_amount)/(amountDetails.level2_percent/100)}</div>
                 </div>
               )
             })}
@@ -118,7 +121,7 @@ const Team = () => {
           <div className='flex text-cyan-400 items-center font-semibold flex-col w-[90%] border border-gray-300 text-lg p-3 m-3 mt-0 shadow-lg shadow-blue-400 rounded-lg'>
             <div className='flex flex-col w-full'>
               <div>Level 3 Member: {userDetails.in_indirectMember.length}</div>
-              <div>Level 3 Earning: &#8377;{userDetails.in_indirectRecharge}</div>
+              <div>Level 3 Earning: &#8377;{(userDetails.in_indirectRecharge)/(amountDetails.level3_percent/100)}</div>
             </div>
 
             {level3.map((element, index) => {
@@ -131,7 +134,7 @@ const Team = () => {
 
                   </div>
                   <div>+91 {element.mobno}</div>
-                  <div>&#8377; {element.recharge_amount}</div>
+                  <div>&#8377; {(element.recharge_amount)/(amountDetails.level3_percent/100)}</div>
                 </div>
               )
             })}
