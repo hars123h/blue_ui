@@ -290,71 +290,71 @@ const Home = () => {
                     <div className='grid grid-cols-1 gap-1'>
                         {userDetails && (amountDetails.plan_state[0] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={20} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={50} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={20} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={50} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[1] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={50} plan_amount={600} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={90} plan_amount={600} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={50} plan_amount={600} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={90} plan_amount={600} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[2] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={100} plan_amount={1500} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={180} plan_amount={1500} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={100} plan_amount={1500} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={180} plan_amount={1500} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[3] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={170} plan_amount={3000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={480} plan_amount={3000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={170} plan_amount={3000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={480} plan_amount={3000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[4] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={300} plan_amount={5000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={750} plan_amount={5000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={300} plan_amount={5000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={750} plan_amount={5000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[5] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={410} plan_amount={9000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={1350} plan_amount={9000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={410} plan_amount={9000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={1350} plan_amount={9000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[6] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={750} plan_amount={20000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={3100} plan_amount={20000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={750} plan_amount={20000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={3100} plan_amount={20000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
