@@ -290,11 +290,11 @@ const Home = () => {
                     <div className='grid grid-cols-1 gap-1'>
                         {userDetails && (amountDetails.plan_state[0] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={50} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={40} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={50} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={40} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         )}
 
