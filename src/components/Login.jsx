@@ -47,7 +47,7 @@ const Login = () => {
         var temp = [];
         dataRes.forEach((doc) => {
             //console.log(doc.data());
-            temp.push(doc.user_id);
+            temp.push(doc.mobileNumber);
             setBlockedUsers(temp);
         });
     }
