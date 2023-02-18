@@ -71,7 +71,9 @@ const Withdrawal = () => {
                 if (docRef.bank_details.bankAccount.length===0) {
                     toaster('Fill bank details first!', '/bank');
                 } else {
+
                     setDetails(docRef.bank_details);
+                    console.log("doccccc",docRef.bank_details)
                     docRef.balance ? setBalance(docRef.balance) : setBalance(0);
                     setDiffDays(DateDifference(new Date(docRef.lastWithdrawal), new Date()));
                 }
