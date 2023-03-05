@@ -152,7 +152,7 @@ const Project = () => {
             </div>
 
             {/* This is the curved part */}
-            <div className="flex flex-col mine_image items-center text-white h-56 -translate-y-[1px] p-5">
+            <div className="flex flex-col mine_image1 items-center text-white h-56 -translate-y-[1px] p-5">
 
                 <div className='flex flex-col items-center w-full gap-1'>
                     <div className='text-3xl'>&#8377; {today_income}</div>
