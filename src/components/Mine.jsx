@@ -149,7 +149,7 @@ const Mine = () => {
           </div>
         </div>
 
-        <div className="box  bg-[#fafff9] relative  shadow-xl mx-4 mt-20 border border-gray-300" onClick={()=>navigate('/invite')}>
+        <div className="box  bg-[#fafff9] relative  shadow-xl mx-4 mt-20" onClick={()=>navigate('/invite')}>
           <img src={refer} alt="invite_image" className='rounded-xl w-full' />
           <div className='flex flex-col gap-5 absolute top-5 left-5 justify-around'>
             <div className='text-2xl font-extrabold text-white'>Invite friends to make money</div>

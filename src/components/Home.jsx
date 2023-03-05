@@ -224,7 +224,7 @@ const Home = () => {
 
             </div>
             {/* <Slider /> */}
-            <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5 border border-gray-300" onClick={() => navigate('/invite')}>
+            <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5" onClick={() => navigate('/invite')}>
                 <img src={refer} alt="invite_image" className='rounded-xl' />
                 <div className='flex flex-col  absolute top-1 left-2 m-1'>
                     <div className='text-2xl font-extrabold text-white'>Invite friends to make money together</div>

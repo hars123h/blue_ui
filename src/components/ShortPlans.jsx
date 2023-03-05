@@ -200,8 +200,8 @@ const ShortPlans = () => {
                 >
                     <h1 className='text-gray-600 mb-3 text-xl'>Are you Sure?</h1>
                     <div>
-                        <button onClick={() => closeModal('ok')} className='bg-red-500 text-white px-2 py-1 rounded-lg shadow-md w-[64px]'>Yes</button>
-                        <button onClick={() => closeModal('cancel')} className='bg-red-500 text-white px-2 py-1 rounded-lg shadow-md w-[64px] ml-2'>cancel</button>
+                        <button onClick={() => closeModal('ok')} className='bg-vlt text-white px-2 py-1 rounded-lg shadow-md w-[64px]'>Yes</button>
+                        <button onClick={() => closeModal('cancel')} className='bg-vlt text-white px-2 py-1 rounded-lg shadow-md w-[64px] ml-2'>cancel</button>
                     </div>
                 </ReactModal>
             </div>
