@@ -60,7 +60,7 @@ const Bank = () => {
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
-            <div className="options text-center flex bg-cyan-400 p-3 text-white text-lg items-center font-medium">
+            <div className="options text-center flex bg-vlt p-3 text-white text-lg items-center font-medium">
                 <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate('/settings', { state: { withdrawalPassword: loc.state.withdrawalPassword, loginPassword: loc.state.loginPassword } })} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 storke-white  cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
@@ -108,7 +108,7 @@ const Bank = () => {
             </div>
 
             <div className='mb-3'>
-                <button onClick={handleSubmit} className='bg-cyan-400 text-white mx-auto text-lg mb-20 rounded-full shadow-xl block w-4/5 py-2 shadow-red-200'>Confirm</button>
+                <button onClick={handleSubmit} className='bg-vlt text-white mx-auto text-lg mb-20 rounded-full shadow-xl block w-4/5 py-2 shadow-red-200'>Confirm</button>
             </div>
         </div>
     )

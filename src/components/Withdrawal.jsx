@@ -180,12 +180,12 @@ const Withdrawal = () => {
                 >
                     <h1 className='text-gray-600 mb-3 text-xl'>Are you Sure?</h1>
                     <div>
-                        <button onClick={() => handleWithdrawal()} className='bg-cyan-400 text-white px-2 py-1 rounded-lg shadow-md w-[64px]'>Yes</button>
-                        <button onClick={() => setIsOpen(false)} className='bg-cyan-400 text-white px-2 py-1 rounded-lg shadow-md w-[64px] ml-2'>cancel</button>
+                        <button onClick={() => handleWithdrawal()} className='bg-vlt text-white px-2 py-1 rounded-lg shadow-md w-[64px]'>Yes</button>
+                        <button onClick={() => setIsOpen(false)} className='bg-vlt text-white px-2 py-1 rounded-lg shadow-md w-[64px] ml-2'>cancel</button>
                     </div>
                 </ReactModal>
             </div>
-            <div className="options bg-cyan-400 flex text-center text-white text-md shadow-lg p-3 font-medium">
+            <div className="options bg-vlt flex text-center text-white text-md shadow-lg p-3 font-medium">
                 <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate('/home')} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
                 className="w-5 h-5   storke-white cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
@@ -194,12 +194,12 @@ const Withdrawal = () => {
             </div>
             {/*| After Deduction} */}
             <div className="part1 p-3 mx-3 mt-5">
-                <div className='text-md text-cyan-400 font-semibold'>Withdrawal Amount</div>
+                <div className='text-md text-vlt font-semibold'>Withdrawal Amount</div>
                 <div className='flex w-full pt-4'>
                     <div className="value flex items-center py-1 px-2 bg-[#d3d6fe] rounded-lg"> 
                         <input type="number" id="withdrawal_field" onChange={handleWithdrawalAmount} 
                         className='text-xl outline-none bg-[#d3d6fe]' placeholder='Amount' />
-                        <div className='text-cyan-400 font-semibold'>INR</div>
+                        <div className='text-vlt font-semibold'>INR</div>
                     </div>
                 </div>
                 <div className='flex items-center mt-4 justify-start gap-6 my-1'>
@@ -213,42 +213,42 @@ const Withdrawal = () => {
             <div className="part1 mx-3 mt-2">
                 {/* #87a1c3 */}
                 <div className="balance flex flex-col gap-2 text-md p-2">
-                    <div className="phoneno text-cyan-400 font-semibold text-sm">Phone Number:</div>
+                    <div className="phoneno text-vlt font-semibold text-sm">Phone Number:</div>
                     <div className='text-gray-400 bg-[#e0e5e1] text-sm py-2 px-2 rounded-lg'>{details.phoneNo}</div>
                 </div>
 
                 <div className="balance flex flex-col gap-2 text-md p-2">
-                    <div className="phoneno text-cyan-400 font-semibold text-sm">Bank Account:</div>
+                    <div className="phoneno text-vlt font-semibold text-sm">Bank Account:</div>
                     <div className='text-gray-400 bg-[#e0e5e1] text-sm py-2 px-2 rounded-lg'>{details.bankAccount}</div>
                 </div>
 
                 <div className="balance flex flex-col gap-2 text-md p-2">
-                    <div className="phoneno text-cyan-400 font-semibold text-sm">Full Name:</div>
+                    <div className="phoneno text-vlt font-semibold text-sm">Full Name:</div>
                     <div className='text-gray-400 bg-[#e0e5e1] text-sm py-2 px-2 rounded-lg'>{details.fullName}</div>
                 </div>
 
                 <div className="balance flex flex-col gap-2 text-md p-2">
-                    <div className="phoneno text-cyan-400 font-semibold text-sm">IFSC:</div>
+                    <div className="phoneno text-vlt font-semibold text-sm">IFSC:</div>
                     <div className='text-gray-400 bg-[#e0e5e1] text-sm py-2 px-2 rounded-lg'>{details.ifsc}</div>
                 </div>
 
                 <div className="balance flex flex-col gap-2 text-md p-2">
-                    <div className="phoneno text-cyan-400 font-semibold text-sm">Withdrawal Password:</div>
+                    <div className="phoneno text-vlt font-semibold text-sm">Withdrawal Password:</div>
                     <input type="password" onChange={e => setWpassword(e.target.value)} placeholder='Enter Password' 
                     className='text-gray-400 bg-[#e0e5e1] text-sm py-2 px-2 rounded-lg' />
                 </div>
 
                 <div className="balance flex flex-col gap-2 text-md p-2">
-                    <div className="phoneno text-cyan-400 font-semibold text-sm">OTP:</div>
+                    <div className="phoneno text-vlt font-semibold text-sm">OTP:</div>
                     <div className='flex gap-1'>
                         <input type="password" onChange={e => setOtp(e.target.value)} placeholder='Enter OTP' 
                         className='text-gray-400 bg-[#e0e5e1] text-sm py-2 px-2 rounded-lg flex-grow' />
-                        <div className='text-sm bg-cyan-400 rounded-lg font-semibold text-white px-3 py-1 hover:cursor-pointer' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send OTP</div>
+                        <div className='text-sm bg-vlt rounded-lg font-semibold text-white px-3 py-1 hover:cursor-pointer' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send OTP</div>
                     </div>
                 </div>
             </div>
 
-            <div className="part1 bg-[#e0e5e1] text-cyan-400 font-semibold shadow-md p-3 rounded-lg mx-3 mt-5 flex flex-col gap-3">
+            <div className="part1 bg-[#e0e5e1] text-vlt font-semibold shadow-md p-3 rounded-lg mx-3 mt-5 flex flex-col gap-3">
                 <div className='text-sm'>* The time of withdrawal and arrival is subject to the real-time processing time of the local bank, and the normal arrival time is 10 minutes to 24 hours.</div>
                 <div className='text-sm'>* A single minimum withdrawal amount of not less than Rs {amountDetails.mwamount}.</div>
                 <div className='text-sm'>* Withdrawal Time is 9:00 to 19:00  Everyday.</div>
@@ -256,7 +256,7 @@ const Withdrawal = () => {
             {/* [#2e9afe] */}
             <div className='mx-2'>
                 <button onClick={handleLastButton} 
-                className='bg-cyan-400 text-white text-md mt-5 mb-20 rounded-lg shadow-md block w-full py-2 shadow-[#12a5b7]'>Confirm</button>
+                className='bg-vlt text-white text-md mt-5 mb-20 rounded-lg shadow-md block w-full py-2 shadow-[#12a5b7]'>Confirm</button>
             </div>
         </div>
     )

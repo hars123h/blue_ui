@@ -50,7 +50,7 @@ const ClientFeedback = () => {
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
-            <div className="top p-3 cursor-pointer flex items-center bg-cyan-400">
+            <div className="top p-3 cursor-pointer flex items-center bg-vlt">
             <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
@@ -60,7 +60,7 @@ const ClientFeedback = () => {
             </div>
 
             <div className='box gap-3 flex flex-col text-gray-500 p-6 font-semibold bg-[#fafff9] rounded-xl  shadow-xl m-4 border border-gray-300'>
-                <div className='w-full px-2 text-cyan-400 py-2 font-bold text-lg' > * Please enter the feedback details.</div>
+                <div className='w-full px-2 text-vlt py-2 font-bold text-lg' > * Please enter the feedback details.</div>
                 <input placeholder='Mobile Number' type="text" onChange={e => setDetails({ ...details, mobileNumber: e.target.value })}
                     className='w-full bg-[#e0e5e1] px-2  rounded-lg outline-none text-[#16a4ba] py-2  font-normal text-lg' />
                 <input placeholder='Description' type="text" onChange={e => setDetails({ ...details, description: e.target.value })}

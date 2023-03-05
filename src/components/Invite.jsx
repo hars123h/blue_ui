@@ -65,8 +65,8 @@ const Invite = () => {
             <span className='ml-1'>back</span>
             </div>
 
-            <div className="info p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-cyan-400 font-bold mt-5">
-                <div className='text-center text-lg border-b border-cyan-400'>Agent Rewards</div>
+            <div className="info p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-vlt font-bold mt-5">
+                <div className='text-center text-lg border-b border-vlt'>Agent Rewards</div>
                 Level 1, {amountDetails.level1_percent}%
                 <br />
                 Level 2, {amountDetails.level2_percent}%
@@ -76,19 +76,19 @@ const Invite = () => {
 
             <div className="flex gap-2">
 
-                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-cyan-400 font-bold mt-5">
+                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-vlt font-bold mt-5">
                     <div className='font-bold'>Invitation Link</div>
-                    <div className='p-3 rounded-md border overflow-hidden border-cyan-400'>{`https://www.windharvester44.online/register/invite_code/${userDetails.user_invite}`}</div>
-                    <CopyToClipboard text={`https://www.windharvester44.online/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('Copied to clipboard')}>
-                        <span className='mx-auto bg-cyan-400 text-white p-2 rounded-md'>Copy Link</span>
+                    <div className='p-3 rounded-md border overflow-hidden border-vlt'>{`https://www.wikiwandballoon77.tech/register/invite_code/${userDetails.user_invite}`}</div>
+                    <CopyToClipboard text={`https://www.wikiwandballoon77.tech/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('Copied to clipboard')}>
+                        <span className='mx-auto bg-vlt text-white p-2 rounded-md'>Copy Link</span>
                     </CopyToClipboard>
                 </div>
 
-                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-cyan-400 font-bold mt-5">
+                <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-vlt font-bold mt-5">
                     <div className='font-bold'>Invitation code</div>
-                    <div className='p-3 rounded-md border border-cyan-400'>{userDetails.user_invite}</div>
+                    <div className='p-3 rounded-md border border-vlt'>{userDetails.user_invite}</div>
                     <CopyToClipboard text={userDetails.user_invite} onCopy={() => toaster('Copied to clipboard')}>
-                        <span className='mx-auto bg-cyan-400 text-white p-2 rounded-md'>Copy code</span>
+                        <span className='mx-auto bg-vlt text-white p-2 rounded-md'>Copy code</span>
                     </CopyToClipboard>
                 </div>
             </div>
@@ -98,10 +98,10 @@ const Invite = () => {
                 <QRCode
                     size={120}
                     style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                    value={`https://www.windharvester44.online/register/invite_code/${userDetails.user_invite}`}
+                    value={`https://www.wikiwandballoon77.tech/register/invite_code/${userDetails.user_invite}`}
                     viewBox={`0 0 120 120`}
                 />
-                <div className='text-cyan-400 font-extrabold text-center mt-1'>QR code</div>
+                <div className='text-vlt font-extrabold text-center mt-1'>QR code</div>
             </div>
         </div>
     )

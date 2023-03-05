@@ -117,7 +117,7 @@ const Register = () => {
                 </div> : null}
                 <div className='text-sm'>{text}</div>
             </div> : null}
-            <div className='text-center bg-cyan-400 font-sans text-white pt-2 text-lg 
+            <div className='text-center bg-vlt font-sans text-white pt-2 text-lg 
         pb-2'> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute left-2 cursor-pointer hover:bg-white hover:stroke-black hover:rounded-full transition rounded-full ease-in-out delay-150 duration-200">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -130,7 +130,7 @@ const Register = () => {
                     </div>
                     <div className='mt-2'>
                         <input value={mobno} onChange={e => setMobno(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Please enter a valid phone number' name="phoneno" id="phoneno" />
+                            className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md outline-none' placeholder='Please enter a valid phone number' name="phoneno" id="phoneno" />
                     </div>
                 </div>
                 <div className='outline-none flex flex-col mb-2  px-2'>
@@ -139,8 +139,8 @@ const Register = () => {
                         <div className='text-gray-600'>Verification Code</div>
                     </div>
                     <div className="mt-2 flex gap-2">
-                        <input type="text" onChange={e => setOtp(e.target.value)} className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Please enter the verification code' name="otp" id="otp" />
-                        <button className='bg-cyan-400 text-white text-xs px-4 my-1 rounded-md' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send</button>
+                        <input type="text" onChange={e => setOtp(e.target.value)} className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Please enter the verification code' name="otp" id="otp" />
+                        <button className='bg-vlt text-white text-xs px-4 my-1 rounded-md' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send</button>
                     </div>
                 </div>
                 <div className='outline-none flex flex-col mb-2  px-2'>
@@ -150,7 +150,7 @@ const Register = () => {
                     </div>
                     <div className='mt-2'>
                         <input value={pwd} onChange={e => setpwd(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='enter the password' name="pwd" id="pwd" />
+                            className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md outline-none' placeholder='enter the password' name="pwd" id="pwd" />
                     </div>
                 </div>
 
@@ -161,16 +161,16 @@ const Register = () => {
                     </div>
                     <div className='mt-2'>
                         <input value={wpwd} onChange={e => setwpwd(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='enter the withdrawal Password' name="wpwd" id="wpwd" />
+                            className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='enter the withdrawal Password' name="wpwd" id="wpwd" />
                     </div>
                 </div>
 
                 <div className="outline-none flex flex-col mb-2 px-2">
-                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text" className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Invitation code' name="invite_code" id="inv_code" />
+                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text" className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Invitation code' name="invite_code" id="inv_code" />
                 </div>
 
-                <button onClick={handleRegister} className='bg-cyan-400 text-white pt-1 pb-1 rounded-full text-lg w-4/5 mx-auto'>Register</button>
-                <div onClick={() => navigate('/login')} className='text-cyan-400 font-bold text-sm underline mx-auto mt-4'>
+                <button onClick={handleRegister} className='bg-vlt text-white pt-1 pb-1 rounded-full text-lg w-4/5 mx-auto'>Register</button>
+                <div onClick={() => navigate('/login')} className='text-vlt font-bold text-sm underline mx-auto mt-4'>
                     Existing account, login
                 </div>
             </div>

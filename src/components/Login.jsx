@@ -38,7 +38,7 @@ const Login = () => {
 
 
     useEffect(() => {
-        document.body.style.backgroundColor = "rgb(34 211 238)";
+        document.body.style.backgroundColor = "#000084";
         getBlockedUsers();
     }, []);
 
@@ -83,7 +83,7 @@ const Login = () => {
     }
 
     return (
-        <div  className='relative   bg-cyan-400 '>
+        <div  className='relative   bg-vlt '>
             {toasterShow?<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>

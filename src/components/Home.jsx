@@ -41,6 +41,15 @@ import wind2 from '../images/wind2.jpg';
 import wind3 from '../images/wind3.jpg';
 import wind4 from '../images/wind4.jpg';
 
+import refer from '../images/assets/refer.jpg';
+import img1 from '../images/assets/img1.jpg';
+import img2 from '../images/assets/img2.jpg';
+import img3 from '../images/assets/img3.jpg';
+import img4 from '../images/assets/img4.jpg';
+import img5 from '../images/assets/img5.jpg';
+import img6 from '../images/assets/img6.jpg';
+
+
 
 const customStyles = {
     content: {
@@ -197,7 +206,7 @@ const Home = () => {
             </div> : null}
 
             {planPurchaseShow ? <div className='absolute w-[65%]  top-[450px] rounded-lg shadow-xl  z-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex flex-col justify-center gap-3 h-[180px] shadow-2xl border border-gray-300 items-center bg-white w-full text-cyan-400 rounded-xl'>
+                <div className='flex flex-col justify-center gap-3 h-[180px] shadow-2xl border border-gray-300 items-center bg-white w-full text-vlt rounded-xl'>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16">
                             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
@@ -208,14 +217,15 @@ const Home = () => {
             </div> : null}
 
             <div className='bg-[#fafff9] py-3 shadow-lg px-3 flex justify-between items-center'>
-                <div>
-                    <img src={windharvester_logo} className="w-24 h-6" alt="logo" />
+                <div className='font-semibold'>
+                    {/* <img src={windharvester_logo} className="w-24 h-6" alt="logo" /> */}
+                    Wikiwandballoon
                 </div>
 
             </div>
             {/* <Slider /> */}
             <div className="box bg-[#fafff9] relative  shadow-xl mx-4 mt-5 border border-gray-300" onClick={() => navigate('/invite')}>
-                <img src={invite_bg} alt="invite_image" className='rounded-xl' />
+                <img src={refer} alt="invite_image" className='rounded-xl' />
                 <div className='flex flex-col  absolute top-1 left-2 m-1'>
                     <div className='text-2xl font-extrabold text-white'>Invite friends to make money together</div>
                     <div className='text-center shadow-xl px-4 py-1 rounded-full text-white text-xl font-extrabold button_bg'>Implement friends right away</div>
@@ -231,8 +241,8 @@ const Home = () => {
                 >
                     <h1 className='text-gray-600 mb-3 text-xl'>Are you Sure?</h1>
                     <div>
-                        <button onClick={() => closeModal('ok')} className='bg-red-500 text-white px-2 py-1 rounded-lg shadow-md w-[64px]'>Yes</button>
-                        <button onClick={() => closeModal('cancel')} className='bg-red-500 text-white px-2 py-1 rounded-lg shadow-md w-[64px] ml-2'>cancel</button>
+                        <button onClick={() => closeModal('ok')} className='bg-vlt text-white px-2 py-1 rounded-lg shadow-md w-[64px]'>Yes</button>
+                        <button onClick={() => closeModal('cancel')} className='bg-vlt text-white px-2 py-1 rounded-lg shadow-md w-[64px] ml-2'>cancel</button>
                     </div>
                 </ReactModal>
             </div>
@@ -246,7 +256,7 @@ const Home = () => {
                 >
                     <div className='w-full rounded-lg shadow-xl z-10  border border-gray-400'>
                         <div className='flex gap-2 flex-col bg-white w-full text-blue-500 rounded-md'>
-                            <div className='bg-cyan-400 text-center p-1 text-lg shadow-md text-white'>Notice</div>
+                            <div className='bg-vlt text-center p-1 text-lg shadow-md text-white'>Notice</div>
                             <div className='flex flex-col p-2 text-gray-600 text-xs gap-2 font-bold'>
                                 <div>Welcome to Wind Harvester investment Platform</div>
                                 <div>Let Wind Harvester create unlimited wealth with you.</div>
@@ -270,7 +280,7 @@ const Home = () => {
             </div>
 
             {/*Marquee Implementation*/}
-            <div className="bg-cyan-400 rounded-full items-center px-2 text-white relative flex overflow-x-hidden h-10 mx-auto mt-2 border-2 border-gray-100 sm:w-3/5 lg:w-3/5 overflow-y-hidden">
+            <div className="bg-vlt rounded-full items-center px-2 text-white relative flex overflow-x-hidden h-10 mx-auto mt-2 border-2 border-gray-100 sm:w-3/5 lg:w-3/5 overflow-y-hidden">
                 <div>
                     <VolumeUpOutlined />
                 </div>
@@ -290,65 +300,65 @@ const Home = () => {
                     <div className='grid grid-cols-1 gap-1'>
                         {userDetails && (amountDetails.plan_state[0] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={40} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img1} handleClick={handleClick} plan_name={"Wikiwandballoon 1"} plan_cycle={60} plan_daily_earning={45} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 1"} plan_cycle={365} plan_daily_earning={40} plan_amount={300} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img1} handleClick={handleClick} plan_name={"Wikiwandballoon 1"} plan_cycle={60} plan_daily_earning={45} plan_amount={300} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[1] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={90} plan_amount={600} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img2} handleClick={handleClick} plan_name={"Wikiwandballoon 2"} plan_cycle={60} plan_daily_earning={135} plan_amount={700} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 2"} plan_cycle={365} plan_daily_earning={90} plan_amount={600} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img2} handleClick={handleClick} plan_name={"Wikiwandballoon 2"} plan_cycle={60} plan_daily_earning={135} plan_amount={700} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[2] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={180} plan_amount={1500} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img3} handleClick={handleClick} plan_name={"Wikiwandballoon 3"} plan_cycle={60} plan_daily_earning={270} plan_amount={1500} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 3"} plan_cycle={365} plan_daily_earning={180} plan_amount={1500} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img3} handleClick={handleClick} plan_name={"Wikiwandballoon 3"} plan_cycle={60} plan_daily_earning={270} plan_amount={1500} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[3] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={480} plan_amount={3000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img4} handleClick={handleClick} plan_name={"Wikiwandballoon 4"} plan_cycle={30} plan_daily_earning={605} plan_amount={3500} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 4"} plan_cycle={365} plan_daily_earning={480} plan_amount={3000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img4} handleClick={handleClick} plan_name={"Wikiwandballoon 4"} plan_cycle={30} plan_daily_earning={605} plan_amount={3500} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[4] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={750} plan_amount={5000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img5} handleClick={handleClick} plan_name={"Wikiwandballoon 5"} plan_cycle={30} plan_daily_earning={1230} plan_amount={7000} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 5"} plan_cycle={365} plan_daily_earning={750} plan_amount={5000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img5} handleClick={handleClick} plan_name={"Wikiwandballoon 5"} plan_cycle={30} plan_daily_earning={1230} plan_amount={7000} plan_type={'Big Plan'} />
                             </span>
                         )}
 
                         {userDetails && (amountDetails.plan_state[5] === 0) ? (
                             <span className='pointer-events-none'>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={1350} plan_amount={9000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img6} handleClick={handleClick} plan_name={"Wikiwandballoon 6"} plan_cycle={30} plan_daily_earning={2000} plan_amount={9500} plan_type={'Big Plan'} />
                             </span>
                         ) : (
                             <span>
-                                <Card product_type={"long"} product_image={wind2} handleClick={handleClick} plan_name={"Windharvester 6"} plan_cycle={365} plan_daily_earning={1350} plan_amount={9000} plan_type={'Big Plan'} />
+                                <Card product_type={"long"} product_image={img6} handleClick={handleClick} plan_name={"Wikiwandballoon 6"} plan_cycle={30} plan_daily_earning={2000} plan_amount={9500} plan_type={'Big Plan'} />
                             </span>
                         )}
 
-                        {userDetails && (amountDetails.plan_state[6] === 0) ? (
+                        {/* {userDetails && (amountDetails.plan_state[6] === 0) ? (
                             <span className='pointer-events-none'>
                                 <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={3100} plan_amount={20000} plan_type={'Big Plan'} />
                             </span>
@@ -356,9 +366,9 @@ const Home = () => {
                             <span>
                                 <Card product_type={"long"} product_image={wind3} handleClick={handleClick} plan_name={"Windharvester 7"} plan_cycle={365} plan_daily_earning={3100} plan_amount={20000} plan_type={'Big Plan'} />
                             </span>
-                        )}
+                        )} */}
 
-                        {userDetails && (amountDetails.plan_state[7] === 0) ? (
+                        {/* {userDetails && (amountDetails.plan_state[7] === 0) ? (
                             <span className='pointer-events-none'>
                                 <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 8"} plan_cycle={365} plan_daily_earning={2500} plan_amount={35000} plan_type={'Big Plan'} />
                             </span>
@@ -366,9 +376,9 @@ const Home = () => {
                             <span>
                                 <Card product_type={"long"} product_image={wind4} handleClick={handleClick} plan_name={"Windharvester 8"} plan_cycle={365} plan_daily_earning={2500} plan_amount={35000} plan_type={'Big Plan'} />
                             </span>
-                        )}
+                        )} */}
 
-                        {userDetails && (amountDetails.plan_state[8] === 0) ? (
+                        {/* {userDetails && (amountDetails.plan_state[8] === 0) ? (
                             <span className='pointer-events-none'>
                                 <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 9"} plan_cycle={365} plan_daily_earning={4000} plan_amount={60000} plan_type={'Big Plan'} />
                             </span>
@@ -376,7 +386,7 @@ const Home = () => {
                             <span>
                                 <Card product_type={"long"} product_image={wind1} handleClick={handleClick} plan_name={"Windharvester 9"} plan_cycle={365} plan_daily_earning={4000} plan_amount={60000} plan_type={'Big Plan'} />
                             </span>
-                        )}
+                        )} */}
                     </div>)}
 
 

@@ -50,7 +50,7 @@ const ChangeLoginPassword = () => {
                     <div>{toasterText}</div>
                 </div>
             </div>:null}
-            <div className="options text-center flex bg-cyan-400 shadow-lg font-medium items-center p-3">
+            <div className="options text-center flex bg-vlt shadow-lg font-medium items-center p-3">
 
                 <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate('/settings', { state: { withdrawalPassword: loc.state.withdrawalPassword, loginPassword: loc.state.loginPassword } })} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
                 className="w-4 h-4   storke-white  cursor-pointer stroke-white">
@@ -62,7 +62,7 @@ const ChangeLoginPassword = () => {
 {/* [#61b2ff]  */}
             <div className="box flex gap-1 p-3 flex-col text-gray-500 font-semibold bg-[#fafff9] rounded-xl  shadow-xl m-4 border border-gray-300">
 
-                <div className='flex  items-center text-cyan-400 text-md p-2'>
+                <div className='flex  items-center text-vlt text-md p-2'>
                     Please enter the New Password
                 </div>
 
@@ -84,7 +84,7 @@ const ChangeLoginPassword = () => {
 
             <div className='flex'>
                 <button onClick={handleReset} 
-                className='bg-cyan-400 w-[90%] text-white text-lg mt-5 mb-20 rounded-lg mx-auto block py-2 shadow-md'>Confirm</button>
+                className='bg-vlt w-[90%] text-white text-lg mt-5 mb-20 rounded-lg mx-auto block py-2 shadow-md'>Confirm</button>
             </div>
         </div>
     )

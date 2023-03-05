@@ -144,11 +144,11 @@ const Project = () => {
                 </div>
             </div> : null}
 
-            <div className="options text-center text-white flex items-center shadow-none text-lg font-medium">
+            <div className="">
                 {/* <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                 </svg> */}
-                <div className='flex-grow text-center text-sm bg-[#25c6da] py-2'>Project Record</div>
+                <div className='flex-grow text-white text-center text-sm bg-[#000084] py-2'>Project Record</div>
             </div>
 
             {/* This is the curved part */}
@@ -253,7 +253,7 @@ const Project = () => {
                                                 <div className='text-xs text-gray-400'>Received Amount</div>
                                             </div>
                                         </div>
-                                        <div className='text-white w-[70%] mx-auto rounded-full py-2 mt-4 text-sm text-center bg-cyan-400'>
+                                        <div className='text-white w-[70%] mx-auto rounded-full py-2 mt-4 text-sm text-center bg-vlt'>
                                             {(element.plan_daily_earning * element.plan_cycle === DateDifference(new Date(element.date_purchased), new Date(element.date_till_rewarded)) * element.quantity * element.plan_daily_earning) ? 'Finished' : 'Running'}
                                         </div>
                                     </div>

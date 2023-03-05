@@ -40,7 +40,7 @@ const Recharge = () => {
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
-            <div className="options text-center flex items-center bg-cyan-400 text-white text-md p-3 font-normal mb-4">
+            <div className="options text-center flex items-center bg-vlt text-white text-md p-3 font-normal mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" onClick={() => navigate(-1)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
                 className="w-4 h-4   storke-white  cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
@@ -50,11 +50,11 @@ const Recharge = () => {
 
             <div className="box gap-2 flex flex-col text-gray-500 p-2 font-semibold bg-[#fafff9] rounded-xl  shadow-xl m-4 border border-gray-300">
 
-                <div className='m-1 text-md font-bold  text-cyan-400'>Recharge Amount:</div>
+                <div className='m-1 text-md font-bold  text-vlt'>Recharge Amount:</div>
                 <div className=' flex items-center bg-[#e0e5e1] p-1 m-2 rounded-lg'>
-                    <span className='text-cyan-400 font-bold p-0.5 pr-1 mr-1 py-1'>INR</span>
+                    <span className='text-vlt font-bold p-0.5 pr-1 mr-1 py-1'>INR</span>
                     <input onChange={(e) => setRecharge_Value(e.target.value)} type="text" name="amount" id="amt" placeholder='Amount' 
-                    className='w-full bg-inherit outline-none text-cyan-400 py-1  font-normal text-lg' />
+                    className='w-full bg-inherit outline-none text-vlt py-1  font-normal text-lg' />
                 </div>
 
                 <ol className='text-gray-500 text-xs m-1'>
@@ -66,7 +66,7 @@ const Recharge = () => {
             </div>
 
             <div className="cnf_recharge w-4/5 mx-auto mt-10">
-                <button onClick={handleRecharge} className='w-full bg-cyan-400 py-2 rounded-md text-white text-lg font-bold shadow-customShadow shadow-cyan-200'>Confirm Recharge</button>
+                <button onClick={handleRecharge} className='w-full bg-vlt py-2 rounded-md text-white text-lg font-bold shadow-customShadow shadow-cyan-200'>Confirm Recharge</button>
             </div>
         </div>
     )
