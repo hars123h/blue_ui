@@ -14,7 +14,7 @@ import BASE_URL from '../api_url';
 import amaz_logi from '../images/amaz_logi.png';
 import windharvester_logo from '../images/windharvester_logo.png';
 import wind_login from '../images/wind_login.jpg'
-
+import logo_wiki from '../images/assets/logo.png';
 
 const Login = () => {
 
@@ -96,7 +96,7 @@ const Login = () => {
                 <div className='text-sm'>{text}</div>
             </div> : null}
             <div className='text-center pt-20'>
-                <img src={wind_login} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mb-8' width={150} />
+                <img src={logo_wiki} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mb-8' width={150} />
             </div>
             <div className='flex flex-col m-auto w-5/6 mt-2'>
                 <div className=" items-center justify-center mb-3 p-2 phoneno flex  bg-[#f1f1f1] rounded-full">

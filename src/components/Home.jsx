@@ -49,6 +49,8 @@ import img4 from '../images/assets/img4.jpg';
 import img5 from '../images/assets/img5.jpg';
 import img6 from '../images/assets/img6.jpg';
 
+import logo_wiki from '../images/assets/logo.png';
+
 
 
 const customStyles = {
@@ -218,8 +220,7 @@ const Home = () => {
 
             <div className='bg-[#fafff9] py-3 shadow-lg px-3 flex justify-between items-center'>
                 <div className='font-semibold'>
-                    {/* <img src={windharvester_logo} className="w-24 h-6" alt="logo" /> */}
-                    Wikiwandballoon
+                    <img src={logo_wiki} className="w-24 h-6" alt="logo" />
                 </div>
 
             </div>
@@ -258,14 +259,14 @@ const Home = () => {
                         <div className='flex gap-2 flex-col bg-white w-full text-blue-500 rounded-md'>
                             <div className='bg-vlt text-center p-1 text-lg shadow-md text-white'>Notice</div>
                             <div className='flex flex-col p-2 text-gray-600 text-xs gap-2 font-bold'>
-                                <div>Welcome to Wind Harvester investment Platform</div>
-                                <div>Let Wind Harvester create unlimited wealth with you.</div>
-                                <div>The Windharvester 44 APP is officialy launched, let us walk together on the road to wealth.</div>
-                                <div>Invest 300 &#8377; Earn 20 &#8377; Daily</div>
-                                <div>Invest 600 &#8377; Earn 50 &#8377; Daily</div>
-                                <div>Invest 1500 &#8377; Earn 100 &#8377; Daily</div>
-                                <div>Invest 3000 &#8377; Earn 170 &#8377; Daily</div>
-                                <div>Invest 5000 &#8377; Earn 300 &#8377; Daily</div>
+                                <div>Welcome to Wikiwandballoon investment Platform</div>
+                                <div>Let  Wikiwandballoon create unlimited wealth with you.</div>
+                                <div>The  Wikiwandballoon app is officialy launched, let us walk together on the road to wealth.</div>
+                                <div>Invest 300 &#8377; Earn 45 &#8377; Daily</div>
+                                <div>Invest 700 &#8377; Earn 135 &#8377; Daily</div>
+                                <div>Invest 1500 &#8377; Earn 270 &#8377; Daily</div>
+                                <div>Invest 3500 &#8377; Earn 605 &#8377; Daily</div>
+                                <div>Invest 7000 &#8377; Earn 12300 &#8377; Daily</div>
                             </div>
                             <div className='text-center text-gray-600 font-semibold p-2 border-t border-gray-600'
                                 onClick={(e) => {

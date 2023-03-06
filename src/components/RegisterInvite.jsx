@@ -127,7 +127,7 @@ const Register = () => {
             {/* <div className='text-center'>
                 <img src={amaz_logi} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-8' width={240} />
             </div> */}
-            <div className="box mb-20 m-auto gap-1 mt-2 lg:w-2/5 w-5/5 px-4 pb-4 pt-16 w-50% flex flex-col">
+            <div className="box mb-20 m-auto gap-1 mt-2 lg:w-2/5 w-5/5 px-4 pb-4 pt-4 w-50% flex flex-col">
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
                         <PhoneAndroid style={{color:'gray'}}/>

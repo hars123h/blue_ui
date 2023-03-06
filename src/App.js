@@ -106,7 +106,7 @@ function App() {
           <Route path="/admin/user_details" element={<UserDetails />} />
           <Route path="/rewards" element={<Rewards />} />
         </Routes>
-        <div className='fixed top-[400px] right-0 p-2 bg-cyan-600 rounded-l-full transform  -translate-y-1/2 flex items-center justify-center'>
+        <div className='fixed top-[400px] right-0 p-2 bg-vlt rounded-l-full transform  -translate-y-1/2 flex items-center justify-center'>
           <a href="https://t.me/WindHarvester" className='no-underline text-white cursor-pointer'>
             <img src={telephone} alt="telephone_icon" className='w-5 h-5 p-1 bg-white rounded-full shadow-2xl' />
           </a>

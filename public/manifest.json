@@ -3,17 +3,17 @@
   "name": "Web based Application",
   "icons": [
     {
-      "src": "windharvester_logo.ico",
+      "src": "logo_wiki.png",
       "sizes": "200x54",
       "type": "image/x-icon"
     },
     {
-      "src": "windharvester_logo.png",
+      "src": "logo_wiki.png",
       "type": "image/png",
       "sizes": "200x54"
     },
     {
-      "src": "windharvester_logo.png",
+      "src": "logo_wiki.png",
       "type": "image/png",
       "sizes": "200x54"
     }

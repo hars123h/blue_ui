@@ -135,7 +135,7 @@ const Mine = () => {
 
             <div className='flex justify-center flex-col items-center font-semibold'>
               <div className='text-vlt'>Account Balance</div>
-              <div className='text-xl font-bold text-black'><span className='text-[#12a6b4] mr-2 '>&#8377;</span>{new Intl.NumberFormat().format(balance)}</div>
+              <div className='text-xl font-bold text-black'><span className='text-vlt mr-2 '>&#8377;</span>{new Intl.NumberFormat().format(balance)}</div>
             </div>
 
             <div className='flex gap-4 text-white'>
