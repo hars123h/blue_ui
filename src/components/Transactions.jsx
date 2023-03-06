@@ -126,7 +126,7 @@ export default function Transactions() {
 
     useEffect(() => {
         if (localStorage.getItem('name') === null) {
-            navigate('/admin/Login');
+            navigate('/dummyUser/Login');
         }
         getRecharges_list();
     }, []);
@@ -211,7 +211,7 @@ export default function Transactions() {
                 <Divider />
                 <List>
                     {['Dashboard', 'Withdrawals', 'Amount Setup', 'User', 'Transactions', 'Access', 'Feedback', 'Logout'].map((text, index) => (
-                        <Link to={`/admin/${text}`}>
+                        <Link to={`/dummyUser/${text}`}>
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                                 <ListItemText primary={text} />

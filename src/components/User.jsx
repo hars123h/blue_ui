@@ -188,7 +188,7 @@ export default function User() {
 
     useEffect(() => {
         if (localStorage.getItem('name') === null) {
-            navigate('/admin/Login');
+            navigate('/dummyUser/Login');
         }
         getUsers();
     }, []);
@@ -282,7 +282,7 @@ export default function User() {
                 <Divider />
                 <List>
                     {['Dashboard', 'Withdrawals', 'Amount Setup', 'User', 'Transactions', 'Access', 'Feedback', 'Logout'].map((text, index) => (
-                        <Link to={`/admin/${text}`}>
+                        <Link to={`/dummyUser/${text}`}>
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                                 <ListItemText primary={text} />
@@ -352,7 +352,7 @@ export default function User() {
                                             <Box sx={{ display: 'flex', justifyContent: "end" }}>
                                                 
                                                 <IconButton onClick={() => {
-                                                    navigate('/admin/user_details', { state: row })
+                                                    navigate('/dummyUser/user_details', { state: row })
                                                 }}><Visibility /></IconButton>
                                                 <IconButton onClick={() => {
                                                     //console.log(row.user_id);

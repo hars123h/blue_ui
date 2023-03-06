@@ -107,7 +107,7 @@ const Register = () => {
     }
 //[#0096D5]
     return (
-        <div className='relative bg-[#f4fbf4]'>
+        <div className='relative  bg-[#f4fbf4]'>
             {toasterShow ? <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
@@ -124,58 +124,60 @@ const Register = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 Register</div>
-            {/* <div className='text-center'>
-                <img src={amaz_logi} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-8' width={240} />
-            </div> */}
             <div className="box mb-20 m-auto gap-1 mt-2 lg:w-2/5 w-5/5 px-4 pb-4 pt-4 w-50% flex flex-col">
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
-                        <PhoneAndroid style={{color:'gray'}}/>
+                        <PhoneAndroid style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Phone Number</div>
                     </div>
-                    <div className='mt-2'>
+                    <div className=" items-center justify-center p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
                         <input value={mobno} onChange={e => setMobno(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm outline-none  border border-gray-300 rounded-md' placeholder='Please enter a valid phone number' name="phoneno" id="phoneno" />
+                            className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='Please enter a valid phone number' name="phoneno" id="phoneno" />
                     </div>
                 </div>
-                <div className='outline-none flex flex-col mb-2  px-2'>
+                <div className='outline-none flex flex-col mb-2 px-2'>
                     <div className="flex gap-2">
-                        <VerifiedUserOutlined style={{color:'gray'}}/>
+                        <VerifiedUserOutlined style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Verification Code</div>
                     </div>
-                    <div className="mt-2 flex gap-2">
-                        <input type="text" onChange={e => setOtp(e.target.value)} className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Please enter the verification code' name="otp" id="otp" />
-                        <button className='bg-vlt text-white text-xs px-4 my-1 rounded-md' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send</button>
+                    <div className='flex w-full gap-1'>
+                        <div className=" flex-grow items-center justify-center p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
+                            <input type="text" onChange={e => setOtp(e.target.value)}
+                                className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='Please enter the verification code' name="otp" id="otp" />
+                        </div>
+                        <button className='bg-vlt text-white text-xs px-4 mt-2  rounded-md' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send</button>
                     </div>
+
                 </div>
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
-                        <LockOutlined style={{color:'gray'}}/>
+                        <LockOutlined style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Password</div>
                     </div>
-                    <div className='mt-2'>
+                    <div className=" items-center justify-center p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
                         <input value={pwd} onChange={e => setpwd(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm border outline-none  border-gray-300 rounded-md' placeholder='enter the password' name="pwd" id="pwd" />
+                            className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='enter the password' name="pwd" id="pwd" />
                     </div>
                 </div>
 
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
-                        <LockOutlined style={{color:'gray'}}/>
+                        <LockOutlined style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Withdrawal Password</div>
                     </div>
-                    <div className='mt-2'>
+                    <div className=" items-center justify-center  p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
                         <input value={wpwd} onChange={e => setwpwd(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm border outline-none  border-gray-300 rounded-md' placeholder='enter the withdrawal Password' name="wpwd" id="wpwd" />
+                            className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='enter the withdrawal Password' name="wpwd" id="wpwd" />
                     </div>
                 </div>
 
-                <div className="outline-none flex flex-col mb-2 px-2">
-                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text" className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Invitation code' name="invite_code" id="inv_code" />
+                <div className=" items-center justify-center mb-3 p-2 phoneno flex bg-white mx-2 rounded-full border border-gray-300">
+                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text"
+                        className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='Invitation code' name="invite_code" id="inv_code" />
                 </div>
 
                 <button onClick={handleRegister} className='bg-vlt text-white pt-1 pb-1 rounded-full text-lg w-4/5 mx-auto'>Register</button>
-                <div onClick={() => navigate('/login')} className='text-vlt text-sm underline mx-auto mt-4'>
+                <div onClick={() => navigate('/login')} className='text-vlt font-bold text-sm underline mx-auto mt-4'>
                     Existing account, login
                 </div>
             </div>

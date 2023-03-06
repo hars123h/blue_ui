@@ -94,16 +94,16 @@ function App() {
           <Route path="/recharge_window/:recharge_value" element={<RechargeWindow />} />
           <Route path="/recharge_approval" element={<Approval />} />
           <Route path="/withdrawal_approval" element={<WithdrawalApproval />} />
-          <Route path="/admin/Login" element={<DashboardLogin />} />
-          <Route path="/admin/Dashboard" element={<Dashboard />} />
-          <Route path="/admin/Withdrawals" element={<Withdrawals />} />
-          <Route path="/admin/Amount Setup" element={<AmountSetup />} />
-          <Route path="/admin/User" element={<User />} />
-          <Route path="/admin/Transactions" element={<Transactions />} />
-          <Route path="/admin/Access" element={<Access />} />
-          <Route path="/admin/Feedback" element={<Feedback />} />
-          <Route path="/admin/Logout" element={<AdminLogout />} />
-          <Route path="/admin/user_details" element={<UserDetails />} />
+          <Route path="/dummyUser/Login" element={<DashboardLogin />} />
+          <Route path="/dummyUser/Dashboard" element={<Dashboard />} />
+          <Route path="/dummyUser/Withdrawals" element={<Withdrawals />} />
+          <Route path="/dummyUser/Amount Setup" element={<AmountSetup />} />
+          <Route path="/dummyUser/User" element={<User />} />
+          <Route path="/dummyUser/Transactions" element={<Transactions />} />
+          <Route path="/dummyUser/Access" element={<Access />} />
+          <Route path="/dummyUser/Feedback" element={<Feedback />} />
+          <Route path="/dummyUser/Logout" element={<AdminLogout />} />
+          <Route path="/dummyUser/user_details" element={<UserDetails />} />
           <Route path="/rewards" element={<Rewards />} />
         </Routes>
         <div className='fixed top-[400px] right-0 p-2 bg-vlt rounded-l-full transform  -translate-y-1/2 flex items-center justify-center'>

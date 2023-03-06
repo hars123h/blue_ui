@@ -36,15 +36,15 @@ const Register = () => {
     const toaster = (text) => {
         setToasterText(text);
         setToasterShow(true);
-        setTimeout(()=>{
+        setTimeout(() => {
             setToasterShow(false);
             //navigate('/mine');
-        },5000);
+        }, 5000);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         document.body.style.backgroundColor = "#f4fbf4";
-    },[]);
+    }, []);
 
     const handleRegister = async () => {
 
@@ -69,8 +69,8 @@ const Register = () => {
         }
         //console.log({ mobno, pwd, cpwd, wpwd, invt });
         setLoading(true);
-        await axios.post(`${BASE_URL}/register`,{mobno, pwd, wpwd, invt})
-            .then(({data}) => {
+        await axios.post(`${BASE_URL}/register`, { mobno, pwd, wpwd, invt })
+            .then(({ data }) => {
                 setText('Registration Successful!');
                 localStorage.setItem('uid', data.user_id);
                 setMobno('');
@@ -91,7 +91,7 @@ const Register = () => {
 
     const handleOTPSend = (otpGenerated) => {
         //console.log(referralCodeGenerator.alpha('lowercase', 6));
-        if(mobno.length!==10) {
+        if (mobno.length !== 10) {
             toaster('Invalid Mobile Number');
             return;
         }
@@ -125,48 +125,53 @@ const Register = () => {
             <div className="box mb-20 m-auto gap-1 mt-2 lg:w-2/5 w-5/5 px-4 pb-4 pt-4 w-50% flex flex-col">
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
-                        <PhoneAndroid style={{color:'gray'}} />
+                        <PhoneAndroid style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Phone Number</div>
                     </div>
-                    <div className='mt-2'>
+                    <div className=" items-center justify-center p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
                         <input value={mobno} onChange={e => setMobno(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md outline-none' placeholder='Please enter a valid phone number' name="phoneno" id="phoneno" />
+                            className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='Please enter a valid phone number' name="phoneno" id="phoneno" />
                     </div>
                 </div>
-                <div className='outline-none flex flex-col mb-2  px-2'>
+                <div className='outline-none flex flex-col mb-2 px-2'>
                     <div className="flex gap-2">
-                        <VerifiedUserOutlined style={{color:'gray'}}/>
+                        <VerifiedUserOutlined style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Verification Code</div>
                     </div>
-                    <div className="mt-2 flex gap-2">
-                        <input type="text" onChange={e => setOtp(e.target.value)} className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Please enter the verification code' name="otp" id="otp" />
-                        <button className='bg-vlt text-white text-xs px-4 my-1 rounded-md' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send</button>
+                    <div className='flex w-full gap-1'>
+                        <div className=" flex-grow items-center justify-center p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
+                            <input type="text" onChange={e => setOtp(e.target.value)}
+                                className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='Please enter the verification code' name="otp" id="otp" />
+                        </div>
+                        <button className='bg-vlt text-white text-xs px-4 mt-2  rounded-md' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>Send</button>
                     </div>
+
                 </div>
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
-                        <LockOutlined style={{color:'gray'}}/>
+                        <LockOutlined style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Password</div>
                     </div>
-                    <div className='mt-2'>
+                    <div className=" items-center justify-center p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
                         <input value={pwd} onChange={e => setpwd(e.target.value)} type="text"
-                            className='py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md outline-none' placeholder='enter the password' name="pwd" id="pwd" />
+                            className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='enter the password' name="pwd" id="pwd" />
                     </div>
                 </div>
 
                 <div className='outline-none flex flex-col mb-2  px-2'>
                     <div className='flex gap-2'>
-                        <LockOutlined style={{color:'gray'}}/>
+                        <LockOutlined style={{ color: 'gray' }} />
                         <div className='text-gray-600'>Withdrawal Password</div>
                     </div>
-                    <div className='mt-2'>
+                    <div className=" items-center justify-center  p-2 phoneno flex bg-white mt-2 rounded-full border border-gray-300">
                         <input value={wpwd} onChange={e => setwpwd(e.target.value)} type="text"
-                            className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='enter the withdrawal Password' name="wpwd" id="wpwd" />
+                            className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='enter the withdrawal Password' name="wpwd" id="wpwd" />
                     </div>
                 </div>
 
-                <div className="outline-none flex flex-col mb-2 px-2">
-                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text" className='outline-none py-1 px-2 w-full placeholder:text-sm border border-gray-300 rounded-md' placeholder='Invitation code' name="invite_code" id="inv_code" />
+                <div className=" items-center justify-center mb-3 p-2 phoneno flex bg-white mx-2 rounded-full border border-gray-300">
+                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text"
+                        className=' w-5/6 outline-none overflow-x-scroll placeholder:font-semibold' placeholder='Invitation code' name="invite_code" id="inv_code" />
                 </div>
 
                 <button onClick={handleRegister} className='bg-vlt text-white pt-1 pb-1 rounded-full text-lg w-4/5 mx-auto'>Register</button>

@@ -7,10 +7,10 @@ const AdminLogout = () => {
     useEffect(()=>{
       
       if(localStorage.getItem('name')===null) {
-        navigate('/admin/Login');
+        navigate('/dummyUser/Login');
       }
         localStorage.clear();
-        navigate('/admin/Login');
+        navigate('/dummyUser/Login');
     })
 
   return (

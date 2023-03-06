@@ -20,7 +20,7 @@ const DashboardLogin = () => {
             localStorage.setItem('email',data.email);
             localStorage.setItem('password',data.passoword);
             localStorage.setItem('access',data.access);
-            navigate('/admin/Dashboard');
+            navigate('/dummyUser/Dashboard');
         }else {
             toast('Invalid Email/Password!');
         }

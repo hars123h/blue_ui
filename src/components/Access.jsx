@@ -127,7 +127,7 @@ export default function Access() {
     useEffect(() => {
         getControllers();
         if(localStorage.getItem('name')===null) {
-            navigate('/admin/Login');
+            navigate('/dummyUser/Login');
         }
 
     }, []);
@@ -200,7 +200,7 @@ export default function Access() {
                 <Divider />
                 <List>
                     {['Dashboard', 'Withdrawals', 'Amount Setup', 'User', 'Transactions', 'Access', 'Feedback', 'Logout'].map((text, index) => (
-                        <Link to={`/admin/${text}`}>
+                        <Link to={`/dummyUser/${text}`}>
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                                 <ListItemText primary={text} />
